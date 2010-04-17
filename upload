@@ -1,5 +1,0 @@
-#!/bin/sh
-
-git commit -a -m "updated website"
-git push origin master
-rsync -avP --exclude .git -e ssh . gezakovacs,unetbootin@frs.sourceforge.net:/home/groups/u/un/unetbootin/htdocs
