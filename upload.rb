@@ -66,6 +66,6 @@ writef('unetbootin-source-latest.zip/index.php'    , rediroutphp("unetbootin-sou
 writef('unetbootin-source-latest.tar.gz/index.html', redirouthtm("unetbootin-source-#{ver}.tar.gz"))
 writef('unetbootin-source-latest.tar.gz/index.php' , rediroutphp("unetbootin-source-#{ver}.tar.gz"))
 
-#sh 'git commit -a -m "updated website"'
-#sh 'git push origin master'
-#sh 'rsync -avP --exclude .git -e ssh . gezakovacs,unetbootin@frs.sourceforge.net:/home/groups/u/un/unetbootin/htdocs'
+sh 'git commit -a -m "updated website"'
+sh 'git push origin master'
+sh 'rsync -avP --exclude .git -e ssh . gezakovacs,unetbootin@frs.sourceforge.net:/home/groups/u/un/unetbootin/htdocs'
