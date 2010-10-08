@@ -185,13 +185,13 @@ div.rightcolumn {
 <h2><a id="requirements">Requirements</a></h2>
 <ul>
 <li>Microsoft Windows 2000/XP/Vista/7, or Linux.</li>
-<li>A broadband internet connection to download the distribution's .iso file (unless you're using <a href="#other">pre-downloaded files</a>)</li>
+<li>An internet connection to download a distribution to install, or a <a href="#other">pre-downloaded ISO file</a></li>
 </ul>
 <!-- Requirements End -->
 
 <!-- Download Start -->
 <h2><a id="features">Features</a></h2>
-<p>UNetbootin can create a bootable Live USB drive, or it can make a "frugal install" on your local hard disk if you don't have a USB drive. It can load distributions by automatically downloading their ISO (CD image) files, or by using existing ISO files, floppy/hard disk images, or kernel/initrd files, for <a href="#other">installing other distributions</a>.
+<p>UNetbootin can create a bootable Live USB drive, or it can make a "frugal install" on your local hard disk if you don't have a USB drive. It loads distributions either by downloading a ISO (CD image) files for you, or by <a href="#other">using an ISO file you've already downloaded</a>.
 <br/><br/><img src="http://sourceforge.net/dbimage.php?id=167328" alt="screenshot"/><br/>
 The current version has built-in support for automatically downloading and loading the following distributions, though <a href="#other">installing other distributions</a> is also supported:</p>
 <div class="leftcolumn">
@@ -376,15 +376,13 @@ The current version has built-in support for automatically downloading and loadi
   <li><a href="http://sourceforge.net/projects/btmgr/">Smart Boot Manager (SBM)</a>, which can boot off CD-ROM and floppy drives on computers with a faulty BIOS.</li>
   <li><a href="http://www.freedos.org/">FreeDOS</a>, which can run BIOS flash and other legacy DOS utilities.</li>
 </ul>
-<p>&raquo; See <a href="http://sourceforge.net/apps/trac/unetbootin/wiki/builtin-distributions">List of distributions for which UNetbootin has built-in support</a>.</p>
-<p>&raquo; See <a href="http://sourceforge.net/apps/trac/unetbootin/wiki/supported-distributions">List of all distributions known to work with UNetbootin</a>.</p>
 <p>&raquo; See <a href="http://sourceforge.net/apps/trac/unetbootin/wiki/listcustomversion">List of Custom UNetbootin Versions and Plugins</a>.</p>
 <p>&raquo; See <a href="http://sourceforge.net/apps/trac/unetbootin/wiki/useplugin">Using a UNetbootin Plugin</a>.</p>
 <!-- Download End -->
 
 <h2><a id="install">Installation &amp; Screenshots</a></h2>
 
-<ol><li>If using Windows, run the file, select a distribution, floppy/hard disk image, or kernel/initrd to load, select a target drive (USB Drive or Hard Disk), then reboot once done.<br/><br/>
+<ol><li>If using Windows, run the file, select an ISO file or a distribution to download, select a target drive (USB Drive or Hard Disk), then reboot once done.<br/><br/>
 <img src="http://sourceforge.net/dbimage.php?id=173795"
 alt="screenshot"/><br/><br/></li>
 <li>If using Linux, make the file executable (using either the command <code>chmod +x ./unetbootin-linux</code>, or going to Properties->Permissions and checking "Execute"), then start the application, you will be prompted for your password to grant the application administrative rights, then the main dialog will appear, where you select a distribution and install target (USB Drive or Hard Disk), then reboot when prompted.
@@ -408,13 +406,13 @@ alt="screenshot"/><br/><br/>
 
 <h2><a id="other">Installing Other Distributions Using UNetbootin</a></h2>
 
-<p>Download and run UNetbootin, then supply it with the appropriate ISO (CD image) file, floppy/hard disk image, or kernel and initrd files when prompted (see screenshot). Check your distribution's download page to find the appropriate file; if in doubt use the ISO file.</p>
+<p>Download and run UNetbootin, then select the "disk image" option and supply it with an ISO (CD image).</p>
 
 <br/>
 <img src="http://sourceforge.net/dbimage.php?id=173791"
 alt="screenshot"/><br/>
 
-<p>If you're loading an ISO file or floppy/hard disk image, that's all that's required (just press "OK" to start installing); otherwise if you're manually specifying kernel and initrd files and you'd like to specify special booting options, check the distribution's boot configuration files (usually after the "kernel" line in either isolinux.cfg, syslinux.cfg, menu.lst, or grub.conf) and supply them on the "Option" line.</p>
+<p>UNetbootin doesn't use distribution-specific rules for making your live USB drive, so most Linux ISO files should load correctly using this option. However, not all distributions support booting from USB, and some others require extra boot options or other modifications before they can boot from USB drives, so these ISO files will not work as-is. Also, ISO files for non-Linux operating systems have a different boot mechanism, so don't expect them to work either.</p>
 
 <h2><a id="translations">What translations are available, and how can I use them?</a></h2>
 
@@ -449,14 +447,9 @@ No; though some anti-virus products (Kaspersky) raise "Trojan.generic" warnings 
 
 <p><b>How can I get my distribution supported by UNetbootin?</b></p>
 
-<p>Create either:</p>
-<ul>
-<li>An isolinux or GRUB-based ISO file, or</li>
-<li>A floppy or hard disk image file, or</li>
-<li>A kernel and initrd file</li></ul>
-<p>Which can perform an installation of your distribution, either in Live mode, or via an FTP-install option. Then, <a href="http://bugs.launchpad.net/unetbootin">file a bug report</a> and provide a link to the kernel/initrd, or disk image file(s), and your support for your distribution will be added in the next release of UNetbootin.</p>
+<p>First, try loading the ISO file via the diskimage option, and see if that works (because UNetbootin doesn't use distribution-specific rules for creating live USB drives, it should be able to load most Linux ISOs as-is). If the resulting live USB doesn't boot correctly, check your distribution's documentation, and verify that it indeed can be booted from a standard (FAT32-formatted) USB drive. Also ensure that it doesn't need any extra boot options or other modifications to boot from a USB drive. If both of these are correct, you may have found a bug, so <a href="http://bugs.launchpad.net/unetbootin">file a bug report</a>.</p>
 
-<p>&raquo; See <a href="http://sourceforge.net/apps/trac/unetbootin/wiki/supported-distributions">List of all distributions known to work with UNetbootin</a>.</p>
+<p>If your distribution's ISO file can already be loaded correctly via the diskimage option, and are trying to get it added to the list of distributions which UNetbootin can download for you, <a href="http://bugs.launchpad.net/unetbootin">file a bug report</a> and provide a link to the latest release.</p>
 
 <p><b>How can I create specialized, rebranded, distro-specific releases?</b></p>
 
@@ -478,7 +471,7 @@ No; though some anti-virus products (Kaspersky) raise "Trojan.generic" warnings 
 
 <p><b>Where can I report bugs, request new features, get help, etc?</b></p>
 
-<p>If you encounter errors with UNetbootin itself, <a href="http://answers.launchpad.net/unetbootin">ask a question</a> or <a href="http://bugs.launchpad.net/unetbootin">file a bug report</a>. You can also see the Ubuntu Forums (the <a href="http://ubuntuforums.org/showthread.php?t=811397">LiveUSB installation thread</a> or <a href="http://ubuntuforums.org/showthread.php?t=427540">Hard disk installation thread</a> depending on your install mode), or the <a href="http://www.boot-land.net/forums/index.php?showforum=79">forum on Boot Land</a>, but only Launchpad (<a href="http://bugs.launchpad.net/unetbootin">bugs</a> and <a href="http://answers.launchpad.net/unetbootin">answers</a>), not the forums, are monitored by developers. However, if it's a distribution or hardware-specific issue, file a bug report against the distribution itself.</p>
+<p>If you encounter errors with UNetbootin itself, first try using the version available on this website if you obtained it from a different source (your version may be outdated). If the problem still persists, take note of the version of UNetbootin you're using (it's in the filename if you downloaded it from here), the ISO file you're installing or the distribution you're letting UNetbootin download for you, and the OS you're on (like "Windows 7, 64-bit" or "Ubuntu 10.04, 32-bit"), and <a href="http://answers.launchpad.net/unetbootin">ask a question</a> or <a href="http://bugs.launchpad.net/unetbootin">file a bug report</a>, mentioning the above details. You can also see the Ubuntu Forums (the <a href="http://ubuntuforums.org/showthread.php?t=811397">LiveUSB installation thread</a> or <a href="http://ubuntuforums.org/showthread.php?t=427540">Hard disk installation thread</a> depending on your install mode), or the <a href="http://www.boot-land.net/forums/index.php?showforum=79">forum on Boot Land</a>, but only Launchpad (<a href="http://bugs.launchpad.net/unetbootin">bugs</a> and <a href="http://answers.launchpad.net/unetbootin">answers</a>), not the forums, are monitored by developers. However, if it's a distribution or hardware-specific issue, file a bug report against the distribution itself.</p>
 
 <h2><a id="credits">License and Credits</a></h2>
 
