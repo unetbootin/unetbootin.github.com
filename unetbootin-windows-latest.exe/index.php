@@ -1,3 +1,3 @@
 <?php
-header( 'Location: http://downloads.sourceforge.net/unetbootin/unetbootin-windows-502.exe' ) ;
+header( 'Location: http://downloads.sourceforge.net/unetbootin/unetbootin-windows-506.exe' ) ;
 ?>
