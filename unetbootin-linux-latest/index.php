@@ -1,3 +1,3 @@
 <?php
-header( 'Location: http://downloads.sourceforge.net/unetbootin/unetbootin-linux-506' ) ;
+header( 'Location: http://downloads.sourceforge.net/unetbootin/unetbootin-linux-527' ) ;
 ?>
