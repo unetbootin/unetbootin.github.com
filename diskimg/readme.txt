@@ -1,3 +1,5 @@
+Note that UNetbootin now has an option for creating persistence files on Ubuntu liveUSB drives, hence these instructions are no longer necessary.
+
 Go to http://unetbootin.sourceforge.net/diskimg/ and download one of the files (128mb.zip, 256mb.zip, or 512mb.zip) corresponding to the amount of persistent space you want (make sure the size of the persistent disk image is smaller than the free space you have on your USB drive).
 
 Now extract the file "casper.rw" from the zip file to your USB drive.
