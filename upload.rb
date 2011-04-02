@@ -61,6 +61,8 @@ writef('unetbootin-linux-latest/index.html'        , redirouthtm("unetbootin-lin
 writef('unetbootin-linux-latest/index.php'         , rediroutphp("unetbootin-linux-#{ver}"))
 writef('unetbootin-windows-latest.exe/index.html'  , redirouthtm("unetbootin-windows-#{ver}.exe"))
 writef('unetbootin-windows-latest.exe/index.php'   , rediroutphp("unetbootin-windows-#{ver}.exe"))
+writef('unetbootin-mac-latest.zip/index.html'      , redirouthtm("unetbootin-mac-#{ver}.zip"))
+writef('unetbootin-mac-latest.zip/index.php'       , rediroutphp("unetbootin-mac-#{ver}.zip"))
 writef('unetbootin-source-latest.zip/index.html'   , redirouthtm("unetbootin-source-#{ver}.zip"))
 writef('unetbootin-source-latest.zip/index.php'    , rediroutphp("unetbootin-source-#{ver}.zip"))
 writef('unetbootin-source-latest.tar.gz/index.html', redirouthtm("unetbootin-source-#{ver}.tar.gz"))
