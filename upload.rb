@@ -28,7 +28,16 @@ def writef(fn, c)
 	end
 end
 
-def redirouthtm(outstr)
+ver = nil
+begin
+	ver = (cat 'version.txt').split('\n')[0].to_i
+rescue
+	puts "no version.txt"
+	exit
+end
+$ver = ver
+
+def sfredirouthtm(outstr)
 return <<eos
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
@@ -41,7 +50,7 @@ return <<eos
 eos
 end
 
-def rediroutphp(outstr)
+def sfrediroutphp(outstr)
 return <<eos
 <?php
 header( 'Location: http://downloads.sourceforge.net/unetbootin/#{outstr}' ) ;
@@ -49,12 +58,25 @@ header( 'Location: http://downloads.sourceforge.net/unetbootin/#{outstr}' ) ;
 eos
 end
 
-ver = nil
-begin
-	ver = (cat 'version.txt').split('\n')[0].to_i
-rescue
-	puts "no version.txt"
-	exit
+def redirouthtm(outstr)
+return <<eos
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title></title>
+<meta http-equiv="REFRESH" content="0;url=http://launchpad.net/unetbootin/trunk/#{$ver}/+download/#{outstr}">
+</head>
+<body></body>
+</html>
+eos
+end
+
+def rediroutphp(outstr)
+return <<eos
+<?php
+header( 'Location: http://launchpad.net/unetbootin/trunk/#{$ver}/+download/#{outstr}' ) ;
+?>
+eos
 end
 
 writef('unetbootin-linux-latest/index.html'        , redirouthtm("unetbootin-linux-#{ver}"))
