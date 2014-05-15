@@ -431,14 +431,26 @@ alt="screenshot"/><br/>
 
 <p>&raquo; Maybe, see <a href="#other">Installing Other Distributions Using UNetbootin</a>.</p>
 
+<p><b>UNetbootin isn't able to download the distribution, what should I do?</b></p>
+
+<p>Download the ISO straight from the website, then provide it to UNetbootin via the <a href="#other">diskimage option</a>.</p>
+
+<p><b>My USB stick isn't booting, what should I do?</b></p>
+
+<p><a href="http://www.wikihow.com/Format-FAT32">Reformat the USB drive as FAT32</a>, then use UNetbootin again to put your distribution on the USB stick.</p>
+
+<p><b>My USB stick/hard drive isn't detected, what should I do?</b></p>
+
+<p><a href="http://www.wikihow.com/Format-FAT32">Reformat the USB drive as FAT32</a>, then use UNetbootin again. If it still isn't showing up, use the <a href="http://sourceforge.net/apps/trac/unetbootin/wiki/commands#targetdrive">targetdrive command line option</a>.</p>
+
+<p><b>How do I use UNetbootin from the command line?</b></p>
+
+<p>&raquo; See <a href="http://sourceforge.net/apps/trac/unetbootin/wiki/commands">UNetbootin Command Line Options</a>.</p>
+
 <p><b>How does UNetbootin work, and what does it do?</b></p>
 
 <p>&raquo; See <a href="http://sourceforge.net/apps/trac/unetbootin/wiki/howitworks">How UNetbootin Works</a>.</p>
 <p>&raquo; See <a href="http://sourceforge.net/apps/trac/unetbootin/wiki/installmodes">USB Drive and Hard Disk Install Modes</a>.</p>
-
-<p><b>Can I use UNetbootin via the command line?</b></p>
-
-<p>&raquo; Yes, see <a href="http://sourceforge.net/apps/trac/unetbootin/wiki/commands">UNetbootin Command Line Options</a>.</p>
 
 <p><b>Where can I ask questions, get help, report bugs, request new features, etc?</b></p>
 
@@ -462,20 +474,10 @@ No; though some anti-virus products (Kaspersky) raise "Trojan.generic" warnings 
 <p>UNetbootin is written in C++, using the <a href="http://trolltech.com/products/qt">Qt4 toolkit</a>. Source code is available from <a href="https://github.com/gkovacs/unetbootin">Github</a>. The Linux version is compiled using g++, while the Windows version is cross-compiled using mingw32. Both use a statically linked version of Qt4 (to eliminate external library dependencies). Executables are compressed using <a href="http://upx.sourceforge.net/">UPX</a> to reduce file size.</p>
 <p>&raquo; See <a href="http://sourceforge.net/apps/trac/unetbootin/wiki/compile">Compiling UNetbootin</a>.</p>
 
-<p><b>How can I get my distribution supported by UNetbootin?</b></p>
-
-<p>First, try loading the ISO file via the diskimage option, and see if that works (because UNetbootin doesn't use distribution-specific rules for creating live USB drives, it should be able to load most Linux ISOs as-is). If the resulting live USB doesn't boot correctly, check your distribution's documentation, and verify that it indeed can be booted from a standard (FAT32-formatted) USB drive. Also ensure that it doesn't need any extra boot options or other modifications to boot from a USB drive. If both of these are correct, you may have found a bug, so <a href="http://bugs.launchpad.net/unetbootin">file a bug report</a>.</p>
-
 <p>If your distribution's ISO file can already be loaded correctly via the diskimage option, and are trying to get it added to the list of distributions which UNetbootin can download for you, <a href="http://bugs.launchpad.net/unetbootin">file a bug report</a> and provide a link to the latest release.</p>
 
 <p><b>How can I create specialized, rebranded, distro-specific releases?</b></p>
 
-<ul><li><a href="http://www.supergrubdisk.org/">Auto Super Grub Disk</a></li>
-<li><a href="http://www.geteasypeasy.com/">Easy Peasy (formerly Ubuntu Eee)</a></li>
-<li><a href="http://www.aligunduz.org/FUSBi/">FUSBi - Free USB Installer</a></li>
-<li><a href="http://www.xpud.org/download.en.html#tab-3">xPUD</a></li></ul>
-
-<p>UNetbootin can easily be rebranded and adapted to a specific distribution using either a <a href="http://sourceforge.net/apps/trac/unetbootin/wiki/createplugin">plugin system</a>, or a series of <a href="http://en.wikipedia.org/wiki/C_preprocessor">#define</a> statements, as seen in the <a href="unetbootin-source-latest.zip">unetbootin.h</a> file within the <a href="http://launchpad.net/unetbootin">source code</a>. If you are attempting to build a distro-specific version and need additional instructions and details, would like to have your patches merged upstream, or would like to have your custom version added to this list, please <a href="http://bugs.launchpad.net/unetbootin">file a bug report</a>.</p>
 <p>&raquo; See <a href="http://sourceforge.net/apps/trac/unetbootin/wiki/commands">UNetbootin Command Line Options</a>.</p>
 <p>&raquo; See <a href="http://sourceforge.net/apps/trac/unetbootin/wiki/createplugin">Building a UNetbootin Plugin</a>.</p>
 <p>&raquo; See <a href="http://sourceforge.net/apps/trac/unetbootin/wiki/useplugin">Using a UNetbootin Plugin</a>.</p>
