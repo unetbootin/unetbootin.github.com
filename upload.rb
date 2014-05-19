@@ -63,9 +63,9 @@ return <<eos
 <!DOCTYPE html>
 <html>
 <head>
-<title>Redirecting</title>
 <meta http-equiv="REFRESH" content="0; url=#{turl}">
 <link rel="canonical" href="#{turl}" />
+<title>Redirecting</title>
 </head>
 <body>
 <script>
