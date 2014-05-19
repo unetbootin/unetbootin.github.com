@@ -65,8 +65,13 @@ return <<eos
 <head>
 <title></title>
 <meta http-equiv="REFRESH" content="0;url=http://launchpad.net/unetbootin/trunk/#{$ver}/+download/#{outstr}">
+<link rel="canonical" href="http://launchpad.net/unetbootin/trunk/#{$ver}/+download/#{outstr}" />
 </head>
-<body></body>
+<body>
+<script>
+window.location.replace("http://launchpad.net/unetbootin/trunk/#{$ver}/+download/#{outstr}");
+</script>
+</body>
 </html>
 eos
 end
