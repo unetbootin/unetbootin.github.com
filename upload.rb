@@ -64,7 +64,7 @@ return <<eos
 <html>
 <head>
 <title></title>
-<meta http-equiv="REFRESH" content="0;url=http://launchpad.net/unetbootin/trunk/#{$ver}/+download/#{outstr}">
+<meta http-equiv="REFRESH" content="0; url=http://launchpad.net/unetbootin/trunk/#{$ver}/+download/#{outstr}">
 <link rel="canonical" href="http://launchpad.net/unetbootin/trunk/#{$ver}/+download/#{outstr}" />
 </head>
 <body>
