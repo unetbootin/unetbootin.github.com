@@ -58,22 +58,26 @@ header( 'Location: http://downloads.sourceforge.net/unetbootin/#{outstr}' ) ;
 eos
 end
 
-def redirouthtm(outstr)
+def redirouthtm_url(turl)
 return <<eos
 <!DOCTYPE html>
 <html>
 <head>
-<title></title>
-<meta http-equiv="REFRESH" content="0; url=http://launchpad.net/unetbootin/trunk/#{$ver}/+download/#{outstr}">
-<link rel="canonical" href="http://launchpad.net/unetbootin/trunk/#{$ver}/+download/#{outstr}" />
+<title>Redirecting</title>
+<meta http-equiv="REFRESH" content="0; url=#{turl}">
+<link rel="canonical" href="#{turl}" />
 </head>
 <body>
 <script>
-window.location.replace("http://launchpad.net/unetbootin/trunk/#{$ver}/+download/#{outstr}");
+window.location.replace("#{turl}");
 </script>
 </body>
 </html>
 eos
+end
+
+def redirouthtm(outstr)
+return redirouthtm_url("http://launchpad.net/unetbootin/trunk/#{$ver}/+download/#{outstr}")
 end
 
 def rediroutphp(outstr)
