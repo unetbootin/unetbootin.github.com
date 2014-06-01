@@ -88,8 +88,8 @@ header( 'Location: http://launchpad.net/unetbootin/trunk/#{$ver}/+download/#{out
 eos
 end
 
-writef('unetbootin-linux-latest/index.html'        , redirouthtm("unetbootin-linux-#{ver}"))
-writef('unetbootin-linux-latest/index.php'         , rediroutphp("unetbootin-linux-#{ver}"))
+writef('unetbootin-linux-latest/index.html'        , redirouthtm("unetbootin-linux-#{ver}.bin"))
+writef('unetbootin-linux-latest/index.php'         , rediroutphp("unetbootin-linux-#{ver}.bin"))
 writef('unetbootin-windows-latest.exe/index.html'  , redirouthtm("unetbootin-windows-#{ver}.exe"))
 writef('unetbootin-windows-latest.exe/index.php'   , rediroutphp("unetbootin-windows-#{ver}.exe"))
 writef('unetbootin-mac-latest.zip/index.html'      , redirouthtm("unetbootin-mac-#{ver}.zip"))
