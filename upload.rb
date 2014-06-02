@@ -88,16 +88,16 @@ header( 'Location: http://launchpad.net/unetbootin/trunk/#{$ver}/+download/#{out
 eos
 end
 
-writef('unetbootin-linux-latest/index.html'        , redirouthtm("unetbootin-linux-#{ver}.bin"))
-writef('unetbootin-linux-latest/index.php'         , rediroutphp("unetbootin-linux-#{ver}.bin"))
-writef('unetbootin-windows-latest.exe/index.html'  , redirouthtm("unetbootin-windows-#{ver}.exe"))
-writef('unetbootin-windows-latest.exe/index.php'   , rediroutphp("unetbootin-windows-#{ver}.exe"))
-writef('unetbootin-mac-latest.zip/index.html'      , redirouthtm("unetbootin-mac-#{ver}.zip"))
-writef('unetbootin-mac-latest.zip/index.php'       , rediroutphp("unetbootin-mac-#{ver}.zip"))
-writef('unetbootin-source-latest.zip/index.html'   , redirouthtm("unetbootin-source-#{ver}.zip"))
-writef('unetbootin-source-latest.zip/index.php'    , rediroutphp("unetbootin-source-#{ver}.zip"))
-writef('unetbootin-source-latest.tar.gz/index.html', redirouthtm("unetbootin-source-#{ver}.tar.gz"))
-writef('unetbootin-source-latest.tar.gz/index.php' , rediroutphp("unetbootin-source-#{ver}.tar.gz"))
+writef('unetbootin-linux-latest/index.html'        , sfredirouthtm("unetbootin-linux-#{ver}.bin"))
+writef('unetbootin-linux-latest/index.php'         , sfrediroutphp("unetbootin-linux-#{ver}.bin"))
+writef('unetbootin-windows-latest.exe/index.html'  , sfredirouthtm("unetbootin-windows-#{ver}.exe"))
+writef('unetbootin-windows-latest.exe/index.php'   , sfrediroutphp("unetbootin-windows-#{ver}.exe"))
+writef('unetbootin-mac-latest.zip/index.html'      , sfredirouthtm("unetbootin-mac-#{ver}.zip"))
+writef('unetbootin-mac-latest.zip/index.php'       , sfrediroutphp("unetbootin-mac-#{ver}.zip"))
+writef('unetbootin-source-latest.zip/index.html'   , sfredirouthtm("unetbootin-source-#{ver}.zip"))
+writef('unetbootin-source-latest.zip/index.php'    , sfrediroutphp("unetbootin-source-#{ver}.zip"))
+writef('unetbootin-source-latest.tar.gz/index.html', sfredirouthtm("unetbootin-source-#{ver}.tar.gz"))
+writef('unetbootin-source-latest.tar.gz/index.php' , sfrediroutphp("unetbootin-source-#{ver}.tar.gz"))
 
 sh 'git commit -a -m "updated website"'
 sh 'git push origin master'
