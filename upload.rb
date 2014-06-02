@@ -88,16 +88,26 @@ header( 'Location: http://launchpad.net/unetbootin/trunk/#{$ver}/+download/#{out
 eos
 end
 
-writef('unetbootin-linux-latest/index.html'        , redirouthtm("unetbootin-linux-#{ver}.bin"))
-writef('unetbootin-linux-latest/index.php'         , rediroutphp("unetbootin-linux-#{ver}.bin"))
-writef('unetbootin-windows-latest.exe/index.html'  , redirouthtm("unetbootin-windows-#{ver}.exe"))
-writef('unetbootin-windows-latest.exe/index.php'   , rediroutphp("unetbootin-windows-#{ver}.exe"))
-writef('unetbootin-mac-latest.zip/index.html'      , redirouthtm("unetbootin-mac-#{ver}.zip"))
-writef('unetbootin-mac-latest.zip/index.php'       , rediroutphp("unetbootin-mac-#{ver}.zip"))
-writef('unetbootin-source-latest.zip/index.html'   , redirouthtm("unetbootin-source-#{ver}.zip"))
-writef('unetbootin-source-latest.zip/index.php'    , rediroutphp("unetbootin-source-#{ver}.zip"))
-writef('unetbootin-source-latest.tar.gz/index.html', redirouthtm("unetbootin-source-#{ver}.tar.gz"))
-writef('unetbootin-source-latest.tar.gz/index.php' , rediroutphp("unetbootin-source-#{ver}.tar.gz"))
+genhtm = lambda {|x| redirouthtm(x) }
+genphp = lambda {|x| rediroutphp(x) }
+
+download_site = 'sf' # sf or lp
+
+if download_site == 'sf'
+  genhtm = lambda {|x| sfredirouthtm(x) }
+  genphp = lambda {|x| sfrediroutphp(x) }
+end
+
+writef('unetbootin-linux-latest/index.html'        , genhtm.call("unetbootin-linux-#{ver}.bin"))
+writef('unetbootin-linux-latest/index.php'         , genphp.call("unetbootin-linux-#{ver}.bin"))
+writef('unetbootin-windows-latest.exe/index.html'  , genhtm.call("unetbootin-windows-#{ver}.exe"))
+writef('unetbootin-windows-latest.exe/index.php'   , genphp.call("unetbootin-windows-#{ver}.exe"))
+writef('unetbootin-mac-latest.zip/index.html'      , genhtm.call("unetbootin-mac-#{ver}.zip"))
+writef('unetbootin-mac-latest.zip/index.php'       , genphp.call("unetbootin-mac-#{ver}.zip"))
+writef('unetbootin-source-latest.zip/index.html'   , genhtm.call("unetbootin-source-#{ver}.zip"))
+writef('unetbootin-source-latest.zip/index.php'    , genphp.call("unetbootin-source-#{ver}.zip"))
+writef('unetbootin-source-latest.tar.gz/index.html', genhtm.call("unetbootin-source-#{ver}.tar.gz"))
+writef('unetbootin-source-latest.tar.gz/index.php' , genphp.call("unetbootin-source-#{ver}.tar.gz"))
 
 sh 'git commit -a -m "updated website"'
 sh 'git push origin master'
