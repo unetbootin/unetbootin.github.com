@@ -98,8 +98,10 @@ if download_site == 'sf'
   genphp = lambda {|x| sfrediroutphp(x) }
 end
 
-writef('unetbootin-linux-latest/index.html'        , genhtm.call("unetbootin-linux-#{ver}"))
-writef('unetbootin-linux-latest/index.php'         , genphp.call("unetbootin-linux-#{ver}"))
+writef('unetbootin-linux-latest/index.html'        , genhtm.call("unetbootin-linux-#{ver}.bin"))
+writef('unetbootin-linux-latest/index.php'         , genphp.call("unetbootin-linux-#{ver}.bin"))
+writef('unetbootin-linux64-latest/index.html'        , genhtm.call("unetbootin-linux64-#{ver}.bin"))
+writef('unetbootin-linux64-latest/index.php'         , genphp.call("unetbootin-linux64-#{ver}.bin"))
 writef('unetbootin-windows-latest.exe/index.html'  , genhtm.call("unetbootin-windows-#{ver}.exe"))
 writef('unetbootin-windows-latest.exe/index.php'   , genphp.call("unetbootin-windows-#{ver}.exe"))
 writef('unetbootin-mac-latest.zip/index.html'      , genhtm.call("unetbootin-mac-#{ver}.zip"))
