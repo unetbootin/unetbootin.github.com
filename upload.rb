@@ -91,7 +91,7 @@ end
 genhtm = lambda {|x| redirouthtm(x) }
 genphp = lambda {|x| rediroutphp(x) }
 
-download_site = 'sf' # sf or lp
+download_site = 'lp' # sf or lp
 
 if download_site == 'sf'
   genhtm = lambda {|x| sfredirouthtm(x) }

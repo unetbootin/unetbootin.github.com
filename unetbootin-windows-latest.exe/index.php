@@ -1,3 +1,3 @@
 <?php
-header( 'Location: http://downloads.sourceforge.net/unetbootin/unetbootin-windows-608.exe' ) ;
+header( 'Location: http://launchpad.net/unetbootin/trunk/608/+download/unetbootin-windows-608.exe' ) ;
 ?>
