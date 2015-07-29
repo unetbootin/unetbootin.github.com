@@ -1,1 +1,1 @@
-unetbootin-linux-latest
+unetbootin-linux64-latest
