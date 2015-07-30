@@ -115,6 +115,7 @@ def sub_redirects(infile, outfile)
 end
 
 sub_redirects('index_template.html', 'index.html')
+sub_redirects('linux_download_template.html', 'linux_download.html')
 
 if ARGV.include?('upload') or ARGV.include?('push')
   sh 'git commit -a -m "updated website"'
