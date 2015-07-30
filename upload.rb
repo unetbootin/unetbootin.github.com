@@ -107,7 +107,7 @@ writef('unetbootin-source-latest.tar.gz/index.php' , rediroutphp("unetbootin-sou
 
 def sub_redirects(infile, outfile)
 	contents = readf(infile)
-	for x in ['unetbootin-linux-latest.bin', 'unetbootin-linux64-latest.bin', 'unetbootin-windows-latest.exe', 'unetbootin-source-latest.zip', 'unetbootin-source-latest.tar.gz']
+	for x in ['unetbootin-linux-latest.bin', 'unetbootin-linux64-latest.bin', 'unetbootin-windows-latest.exe', 'unetbootin-mac-latest.zip', 'unetbootin-source-latest.zip', 'unetbootin-source-latest.tar.gz']
 		url = $tourl.call(x.sub('latest', $ver.to_s()))
 	  contents = contents.gsub(x, url)
 	end
