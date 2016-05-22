@@ -100,6 +100,8 @@ writef('unetbootin-windows-latest.exe/index.html'  , redirouthtm("unetbootin-win
 writef('unetbootin-windows-latest.exe/index.php'   , rediroutphp("unetbootin-windows-#{ver}.exe"))
 writef('unetbootin-mac-latest.zip/index.html'      , redirouthtm("unetbootin-mac-#{ver}.zip"))
 writef('unetbootin-mac-latest.zip/index.php'       , rediroutphp("unetbootin-mac-#{ver}.zip"))
+writef('unetbootin-mac-latest.dmg/index.html'      , redirouthtm("unetbootin-mac-#{ver}.dmg"))
+writef('unetbootin-mac-latest.dmg/index.php'       , rediroutphp("unetbootin-mac-#{ver}.dmg"))
 writef('unetbootin-source-latest.zip/index.html'   , redirouthtm("unetbootin-source-#{ver}.zip"))
 writef('unetbootin-source-latest.zip/index.php'    , rediroutphp("unetbootin-source-#{ver}.zip"))
 writef('unetbootin-source-latest.tar.gz/index.html', redirouthtm("unetbootin-source-#{ver}.tar.gz"))
@@ -107,7 +109,7 @@ writef('unetbootin-source-latest.tar.gz/index.php' , rediroutphp("unetbootin-sou
 
 def sub_redirects(infile, outfile)
 	contents = readf(infile)
-	for x in ['unetbootin-linux-latest.bin', 'unetbootin-linux64-latest.bin', 'unetbootin-windows-latest.exe', 'unetbootin-mac-latest.zip', 'unetbootin-source-latest.zip', 'unetbootin-source-latest.tar.gz']
+	for x in ['unetbootin-linux-latest.bin', 'unetbootin-linux64-latest.bin', 'unetbootin-windows-latest.exe', 'unetbootin-mac-latest.dmg', 'unetbootin-mac-latest.zip', 'unetbootin-source-latest.zip', 'unetbootin-source-latest.tar.gz']
 		url = $tourl.call(x.sub('latest', $ver.to_s()))
 	  contents = contents.gsub(x, url)
 	end
