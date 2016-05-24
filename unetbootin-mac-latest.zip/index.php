@@ -1,3 +1,3 @@
 <?php
-header( 'Location: http://launchpad.net/unetbootin/trunk/613/+download/unetbootin-mac-613.zip' ) ;
+header( 'Location: http://launchpad.net/unetbootin/trunk/625/+download/unetbootin-mac-625.dmg' ) ;
 ?>
