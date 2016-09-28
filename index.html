@@ -186,8 +186,6 @@ div.column {
 
 <p>You can either let UNetbootin download one of the many <a href="#features">distributions supported out-of-the-box</a> for you, or <a href="#other">supply your own Linux .iso file</a>.</p>
 
-<div id="mlul-banner" style="display: none;">
-<p id="mlul-text"></p>
 </div>
 
 <!-- Introduction End -->
@@ -436,15 +434,6 @@ An upcoming Chrome extension to help you waste less time online (on sites like F
 
 </div>
 <!-- End Main Content -->
-
-<!-- show mac linux usb loader link if the user is on a Mac -->
-<script>
-	var isMac = navigator.platform.toUpperCase().indexOf('MAC')>=0;
-	if (isMac) {
-    document.getElementById("mlul-banner").style.display = 'inline';
-    document.getElementById("mlul-text").innerHTML = 'Note that for distributions other than Ubuntu, USB drives created with UNetbootin might not boot on Macs. Consider using <a rel="nofollow" href="https://sevenbits.github.io/Mac-Linux-USB-Loader/">Mac Linux USB Loader</a> if you need to boot on a Mac.'
-  }
-</script>
 
 </body>
 
