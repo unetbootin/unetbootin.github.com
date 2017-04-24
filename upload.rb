@@ -77,9 +77,16 @@ def lpurl(outstr)
 return "http://launchpad.net/unetbootin/trunk/#{$ver}/+download/#{outstr}"
 end
 
-$tourl = lambda {|x| lpurl(x) }
+def ghurl(outstr)
+return "https://github.com/unetbootin/unetbootin/releases/download/#{$ver}/#{outstr}"
+end
 
-download_site = 'lp' # sf or lp
+$tourl = lambda {|x| ghurl(x) }
+
+download_site = 'gh' # sf or lp or gh
+if download_site == 'lp'
+	$tourl = lambda {|x| lpurl(x) }
+end
 if download_site == 'sf'
 	$tourl = lambda {|x| sfurl(x) }
 end
