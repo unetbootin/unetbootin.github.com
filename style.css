@@ -60,6 +60,7 @@ img {
 	margin-left: auto;
 	margin-right: auto;
 	border: none;
+	max-width: 100%;
 }
 
 hr {
@@ -116,4 +117,15 @@ div.button:hover {
 div.column {
   width: 33%;
   float: left;
+}
+
+@media only screen and (max-device-width: 720px) {
+  #container {
+    width: 90% !important;
+  }
+}
+@media only screen and (max-device-width: 640px) {
+  #container {
+    width: 100% !important;
+  }
 }
