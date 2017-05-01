@@ -1,8 +1,8 @@
 <?php
+
+header( 'Location: http://downloads.3cx.com/downloads/3cxpbxiso/debian-8.6.0-amd64-netinst-3cx.iso' );
+
 /*
-
-*/
-
 $url = "https://www.3cx.com/downloads/3cxpbxiso/debian-3cx.iso";
 
 $ch = curl_init(); //initialise the curl handle
@@ -25,4 +25,6 @@ $realurl_http = str_replace("https://", "http://", $realurl);
 echo $realurl_http;
 //header( 'Location: ' . $realurl_http  ) ;
 curl_close($ch);
+*/
+
 ?>
