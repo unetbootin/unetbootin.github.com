@@ -1,0 +1,131 @@
+body {
+	font-family: 'Lato',sans-serif;
+	font-size: 1.2em;
+	text-align: center;
+	color: #fff;
+	background-color: #222;
+}
+
+ul {
+	text-align: left;
+}
+
+a {
+	color: #88f
+}
+
+div#container {
+	width: 70%;
+	margin: 0 auto;
+}
+
+div#contents {
+	width: 200px;
+	text-align: left;
+	font-size: 14px;
+	float: right;
+	margin: 5px;
+	padding: 5px;
+	background-color: #ffffff;
+	border: 1px solid #000000;
+}
+
+#contents ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+h1 {
+	font-weight: normal;
+}
+
+h2 {
+	font-weight: normal;
+}
+
+p {
+	margin: 0px;
+	padding: 5px;
+}
+
+blockquote {
+	margin: 5px;
+	padding: 5px;
+	border: 1px solid #000000;
+	background-color: #cccccc;
+}
+
+img {
+	margin-left: auto;
+	margin-right: auto;
+	border: none;
+	max-width: 100%;
+}
+
+hr {
+	clear: both;
+	visibility: hidden;
+}
+
+div.button {
+  float: left;
+  background-color: rgb(40, 96, 144);
+  color: white;
+  margin: 10px;
+  border-radius: 20px;
+  border: 1px solid #2e6da4;
+}
+
+div.button:hover {
+  background-color: rgb(32, 77, 116);
+}
+
+.button img {
+  float: left;
+  position: relative;
+  top: -5px;
+}
+
+.button div {
+  color: white;
+  text-decoration: none;
+  margin: 10px;
+  padding: 5px;
+  width: 200px;
+  text-align: center;
+  display: block;
+}
+
+.boxlink:hover {
+  background-color: rgb(32, 77, 116);
+}
+
+.boxlink {
+  display: inline-block;
+  text-decoration: none;
+  background-color: rgb(40, 96, 144);
+  color: white;
+  margin: 1.5% 0.5%;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+}
+
+div.column {
+  width: 33%;
+  float: left;
+}
+
+@media only screen and (max-device-width: 720px) {
+  #container {
+    width: 90% !important;
+  }
+}
+@media only screen and (max-device-width: 640px) {
+  #container {
+    width: 100% !important;
+  }
+}

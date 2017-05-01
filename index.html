@@ -1,145 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<title>UNetbootin - Homepage and Downloads</title>
+  <title>UNetbootin - Homepage and Downloads</title>
   <meta charset="utf-8">
-	<meta name="DESCRIPTION" content="UNetbootin allows you to create bootable Live USB drives for Ubuntu, Fedora, and other Linux distributions without burning a CD. It runs on Windows, Linux, and Mac OS X." />
-	<meta name="KEYWORDS" content="unetbootin,liveusb,ubuntu,mint,fedora,pclinuxos,pclos,sabayon,usb,live usb,debian,gentoo,sabayonlinux,sabayon linux,zenwalk,linux mint,centos,mepis,puppy linux,dsl,elive,mandriva,opensuse,slax,slackware,freebsd,netbsd,bsd,backtrack,ophcrack,supergrubdisk,archlinux,vectorlinux,wubi,netboot,ubuntu-netboot,linux,partedmagic,sbm,smartbootmanager,universal netboot installer,faunos,freedos,download,mac,osx,frugalware,installer,utilities,partition,loopmounted" />
-  <link rel="canonical" href="https://unetbootin.github.io/" />
-
-<style type="text/css">
-body {
-	margin: 0;
-	font-family: verdana, arial , helvetica, sans-serif;
-	text-align: center;
-	background-color: #cccccc;
-}
-
-div#container {
-	width: 760px;
-	text-align: left;
-	margin: 0 auto;
-	padding: 5px;
-	background-color: #ffffff;
-	border: 1px solid #000000;
-}
-
-div#contents {
-	width: 200px;
-	text-align: left;
-	font-size: 14px;
-	float: right;
-	margin: 5px;
-	padding: 5px;
-	background-color: #ffffff;
-	border: 1px solid #000000;
-}
-
-#contents ul {
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-}
-
-h1 {
-	text-align: center;
-	font-size: 18px;
-	margin: 0;
-	padding-top: 5px;
-}
-
-h2 {
-	font-size: 16px;
-	font-style: italic;
-	margin: 0;
-	padding-top: 5px;
-	padding-left: 5px;
-}
-
-p {
-	margin: 0px;
-	padding: 5px;
-}
-
-blockquote {
-	margin: 5px;
-	padding: 5px;
-	border: 1px solid #000000;
-	background-color: #cccccc;
-}
-
-img {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	border: none;
-}
-
-hr {
-	clear: both;
-	visibility: hidden;
-}
-
-div.button {
-  float: left;
-  background-color: rgb(40, 96, 144);
-  color: white;
-  margin: 10px;
-  border-radius: 20px;
-  border: 1px solid #2e6da4;
-}
-
-div.button:hover {
-  background-color: rgb(32, 77, 116);
-}
-
-.button img {
-  float: left;
-  position: relative;
-  top: -5px;
-}
-
-.button a {
-  color: white;
-  text-decoration: none;
-  margin: 10px;
-  padding: 5px;
-  width: 200px;
-  text-align: center;
-  display: block;
-}
-
-.boxlink:hover {
-  background-color: rgb(32, 77, 116);
-}
-
-.boxlink {
-  text-decoration: none;
-  /*
-  background-color: #333355;
-  */
-  background-color: rgb(40, 96, 144);
-  color: white;
-  margin-right: 3px;
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  border-radius: 5px;
-  /*
-  color: #333333;
-  border-bottom: 3px solid #AA3333;
-  */
-}
-
-div.column {
-  width: 33%;
-  float: left;
-}
-
-</style>
-	<link rel="shortcut icon" href="favicon.ico" />
+  <meta name="DESCRIPTION" content="UNetbootin allows you to create bootable Live USB drives for Ubuntu, Fedora, and other Linux distributions without burning a CD. It runs on Windows, Linux, and Mac OS X.">
+  <meta name="KEYWORDS" content="unetbootin,liveusb,ubuntu,mint,fedora,pclinuxos,pclos,sabayon,usb,live usb,debian,gentoo,sabayonlinux,sabayon linux,zenwalk,linux mint,centos,mepis,puppy linux,dsl,elive,mandriva,opensuse,slax,slackware,freebsd,netbsd,bsd,backtrack,ophcrack,supergrubdisk,archlinux,vectorlinux,wubi,netboot,ubuntu-netboot,linux,partedmagic,sbm,smartbootmanager,universal netboot installer,faunos,freedos,download,mac,osx,frugalware,installer,utilities,partition,loopmounted">
+  <link rel="canonical" href="https://unetbootin.github.io/">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" href="favicon.ico">
+  <style type="text/css">.txlive {display: none;}</style>
+  <script type="text/javascript" src="http://cdn.transifex.com/cdbb199282754614bb488676c54fcc7b/latest/manifest.jsonp"></script>
+  <style type="text/css">
+.txlive-langselector { position:fixed;z-index:999999;min-width: 120px;line-height:32px;background-color:rgba( 0,0,0,0.75 );box-shadow: 0 0 4px rgba( 0,0,0,0.3 );color: #fff;font-size: 14px;font-family: inherit; }
+.txlive-langselector * { margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;border-radius: 0;-moz-border-radius:0;-webkit-border-radius:0;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-border-radius:0;opacity:1; }
+.txlive-langselector.txlive-langselector-topleft { top:0;left:0;right:auto;bottom:auto;border-radius: 0 0 2px 0;-moz-border-radius: 0 0 2px 0;-webkit-border-radius: 0 0 2px 0; }
+.txlive-langselector.txlive-langselector-topright { top:0;left:auto;right:0;bottom:auto;border-radius: 0 2px 0 0;-moz-border-radius: 0 2px 0 0;-webkit-border-radius: 0 2px 0 0; }
+.txlive-langselector.txlive-langselector-bottomleft { top:auto;left:0;right:auto;bottom:0;border-radius: 0 2px 0 0;-moz-border-radius: 0 2px 0 0;-webkit-border-radius: 0 2px 0 0; }
+.txlive-langselector.txlive-langselector-bottomright { top:auto;left:auto;right:0;bottom:0;border-radius: 2px 0 0 0;-moz-border-radius: 2px 0 0 0;-webkit-border-radius: 2px 0 0 0; }
+.txlive-langselector .txlive-langselector-toggle { overflow: hidden;display: block;padding:2px 16px;width: 100%;height:36px;cursor:pointer;cursor:hand; }
+.txlive-langselector.txlive-langselector-topleft .txlive-langselector-toggle { overflow: hidden;display: block;border-top:2px solid #006f9f;padding:2px 16px;height:36px;line-height:32px;cursor:pointer;cursor:hand; }
+.txlive-langselector.txlive-langselector-topright .txlive-langselector-toggle { overflow: hidden;display: block;border-top:2px solid #006f9f;padding:2px 16px;height:36px;line-height:32px;cursor:pointer;cursor:hand; }
+.txlive-langselector.txlive-langselector-bottomleft .txlive-langselector-toggle { overflow: hidden;display: block;border-bottom:2px solid #006f9f;padding:2px 16px;height:36px;line-height:32px;cursor:pointer;cursor:hand; }
+.txlive-langselector.txlive-langselector-bottomright .txlive-langselector-toggle { overflow: hidden;display: block;border-bottom:2px solid #006f9f;padding:2px 16px;height:36px;line-height:32px;cursor:pointer;cursor:hand; }
+.txlive-langselector .txlive-langselector-current { float: left;padding: 0;max-width: 200px;overflow:hidden;white-space: nowrap;text-overflow:ellipsis; }
+.txlive-langselector .txlive-langselector-marker { float: right;display: block;position:relative;width:0;height:0;margin-left:8px;margin-top: 13px;border-right:4px dashed transparent;border-left:4px dashed transparent;}
+.txlive-langselector-topright .txlive-langselector-marker,.txlive-langselector-topleft .txlive-langselector-marker {border-top:4px solid #fff;}
+.txlive-langselector-bottomright .txlive-langselector-marker,.txlive-langselector-bottomleft .txlive-langselector-marker {border-bottom:4px solid #fff;}
+.txlive-langselector-list { position:absolute;width: 100%;margin:0;padding:10px 0;display:none;background-color:#eaf1f7;box-shadow: 0 0 4px rgba( 0,0,0,0.3 );color:#666;list-style-type:none; }
+.txlive-langselector-list.txlive-langselector-list-opened { display:block; }
+.txlive-langselector-list > li {padding:0 16px;width:100%;overflow:hidden;white-space: nowrap;text-overflow:ellipsis;}
+.txlive-langselector-list > li:hover {background-color:#b0b9c1;color:#fff;cursor:pointer;cursor:hand;}
+.txlive-langselector-topright > .txlive-langselector-list {top:40px;left:auto;right:0;bottom:auto;border-bottom: 1px solid #f4f7f9;}
+.txlive-langselector-topleft > .txlive-langselector-list {top:40px;left:0;right:auto;bottom:auto;border-bottom: 1px solid #f4f7f9;}
+.txlive-langselector-bottomright > .txlive-langselector-list {top:auto;left:auto;right:0;bottom:40px;border-top: 1px solid #f4f7f9;}
+.txlive-langselector-bottomleft > .txlive-langselector-list {top:auto;left:0;right:auto;bottom:40px;border-top: 1px solid #f4f7f9;}
+.txlive-langselector-topright > .txlive-langselector-list,.txlive-langselector-bottomright > .txlive-langselector-list {border-radius: 2px 0 0 2px;-moz-border-radius: 2px 0 0 2px;-webkit-border-radius: 2px 0 0 2px;}
+.txlive-langselector-topleft > .txlive-langselector-list,.txlive-langselector-bottomleft > .txlive-langselector-list {border-radius: 0 2px 2px 0;-moz-border-radius: 0 2px 2px 0;-webkit-border-radius: 0 2px 2px 0;}
+  </style>
 </head>
 
 <body>
@@ -147,29 +44,31 @@ div.column {
 <div id="container">
 
 <!-- Start Main Content -->
-<h1>UNetbootin</h1>
+<h1 style="margin-bottom: 0.2em">UNetbootin</h1>
 
-<div style="text-align: center; margin-top: 15px; margin-bottom: 10px">
-<a class="boxlink" href="#features">Features</a>
-<a class="boxlink" href="#install">Using</a>
-<a class="boxlink" href="#distros">Supported Distributions</a>
-<a class="boxlink" href="#faq">FAQs</a>
-<a class="boxlink" href="#credits">License</a>
-<a class="boxlink" href="https://github.com/unetbootin/unetbootin/wiki/Home/">Wiki</a>
+<div>
+  <a class="boxlink" href="#features">Features</a>
+  <a class="boxlink" href="#install">Using</a>
+  <a class="boxlink" href="#distros">Supported&nbsp;Distributions</a>
+  <a class="boxlink" href="#faq">FAQs</a>
+  <a class="boxlink" href="#credits">License</a>
+  <a class="boxlink" href="https://github.com/unetbootin/unetbootin/wiki/Home/">Wiki</a>
 </div>
 
-<div class="button"><a href="https://github.com/unetbootin/unetbootin/releases/download/638/unetbootin-windows-638.exe"><img src="windows.png" alt="windows" /><b>Download</b><br/>(Windows)</a></div>
-<div class="button"><a href="linux_download.html"><img src="linux.png" alt="linux" /><b>Download</b><br/>(Linux)</a></div>
-<div class="button"><a href="https://github.com/unetbootin/unetbootin/releases/download/638/unetbootin-mac-638.dmg"><img src="mac.png" alt="mac" /><b>Download</b><br/>(Mac OS X)</a></div>
+<div style="text-align: center; clear: both;margin: 0 auto;display: inline-block;">
+  <a href="https://github.com/unetbootin/unetbootin/releases/download/638/unetbootin-windows-638.exe"><div class="button" style=""><div><img src="windows.svg" alt="windows" style="height: 55px;"><b>Download</b><br>(Windows)</div></div></a>
+  <a href="linux_download.html"><div class="button"><div><img src="linux.svg" alt="linux" style="height: 55px;"><b>Download</b><br>(Linux)</div></div></a>
+  <a href="https://github.com/unetbootin/unetbootin/releases/download/638/unetbootin-mac-638.dmg"><div class="button" style=""><div><img src="apple.svg" alt="mac" style="height: 55px;"><b>Download</b><br>(macOS)</div></div></a>
+</div>
 
-<div style="text-align: center">
+<div style="display:block; text-align: center; clear: both;">
 
-<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=AM2VHRGU9QF9A&amp;lc=US&amp;item_name=UNetbootin%20Development&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted" target="_blank"><div style="font-size: 12px; color: #444; border: 1px solid #ccc; border-radius: 5px; display: inline-block; left: auto; right: auto; padding: 3px; font-weight: bold"><img src="paypal.png" style="float: left; padding-right: 5px;" alt="Donate via Paypal" />Donate via Paypal</div></a>
-<!-- <a href="https://www.paypal.me/unetbootin/5" target="_blank"><div style="font-size: 12px; color: #444; border: 1px solid #ccc; border-radius: 5px; display: inline-block; left: auto; right: auto; padding: 3px; font-weight: bold"><img src="paypal.png" style="float: left; padding-right: 5px;" alt="Donate via Paypal" />Donate via Paypal</div></a> -->
+  <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=AM2VHRGU9QF9A&amp;lc=US&amp;item_name=UNetbootin%20Development&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted" target="_blank"><div style="/*! font-size: 12px; */ /*! color: #444; */ border: 1px solid #ccc; border-radius: 5px; display: inline-block; left: auto; right: auto; padding: 5px; font-weight: bold;"><img src="paypal.svg" style="float: left; padding-right: 5px; height: 22px;" alt="Donate via Paypal">Donate via Paypal</div></a>
+  <!-- <a href="https://www.paypal.me/unetbootin/5" target="_blank"><div style="font-size: 12px; color: #444; border: 1px solid #ccc; border-radius: 5px; display: inline-block; left: auto; right: auto; padding: 3px; font-weight: bold"><img src="paypal.png" style="float: left; padding-right: 5px;" alt="Donate via Paypal" />Donate via Paypal</div></a> -->
 
-<a href="https://coinbase.com/checkouts/b6c03143c5843875d41731764c1b89ad" target="_blank"><div style="font-size: 12px; color: #444; border: 1px solid #ccc; border-radius: 5px; display: inline-block; left: auto; right: auto; padding: 3px; font-weight: bold"><img src="bitcoin.png" style="float: left; padding-right: 5px" alt="Donate via Bitcoin" />Donate via Bitcoin</div></a>
+  <a href="https://coinbase.com/checkouts/b6c03143c5843875d41731764c1b89ad" target="_blank"><div style="/*! font-size: 12px; */ /*! color: #444; */ border: 1px solid #ccc; border-radius: 5px; display: inline-block; left: auto; right: auto; padding: 5px; font-weight: bold"><img src="bitcoin.png" style="float: left; padding-right: 5px" alt="Donate via Bitcoin">Donate via Bitcoin</div></a>
 
-<a href="https://venmo.com/?txn=pay&amp;recipients=gezak&amp;amount=5.00&amp;note=for%20UNetbootin%20Development&amp;audience=public" target="_blank"><div style="font-size: 12px; color: #444; border: 1px solid #ccc; border-radius: 5px; display: inline-block; left: auto; right: auto; padding: 3px; font-weight: bold"><img src="venmo.png" style="float: left; padding-right: 5px" alt="Donate via Venmo" />Donate via Venmo</div></a>
+  <a href="https://venmo.com/?txn=pay&amp;recipients=gezak&amp;amount=5.00&amp;note=for%20UNetbootin%20Development&amp;audience=public" target="_blank"><div style="/*! font-size: 12px; */ /*! color: #444; */ border: 1px solid #ccc; border-radius: 5px; display: inline-block; left: auto; right: auto; padding: 5px; font-weight: bold"><img src="venmo.png" style="float: left; padding-right: 5px" alt="Donate via Venmo">Donate via Venmo</div></a>
 
 <!--
 <a href="https://flattr.com/submit/auto?user_id=gezak&amp;url=https%3A%2F%2Funetbootin.github.io%2F" target="_blank"><div style="font-size: 12px; color: #444; border: 1px solid #ccc; border-radius: 5px; display: inline-block; left: auto; right: auto; padding: 3px; font-weight: bold"><img src="flattr.png" alt="Flattr this" title="Flattr this" style="float: left; padding-right: 5px;" />Flattr this</div></a>
@@ -178,10 +77,6 @@ div.column {
 </div>
 
 <br>
-
-<!--
-<div style="height: 100px"></div>
--->
 
 <p>UNetbootin allows you to create bootable Live USB drives for Ubuntu and other Linux distributions without burning a CD.</p>
 
@@ -197,186 +92,169 @@ div.column {
 </ul>
 -->
 
-<!-- Download Start -->
-<h2><a id="features">Features</a></h2>
+<h2 id="features">Features</h2>
 
 <p>UNetbootin can create a bootable <a rel="nofollow" href="https://en.wikipedia.org/wiki/Live_USB">Live USB</a> drive</p>
 <p>It loads distributions either by downloading a ISO (CD image) files for you, or by <a href="#other">using an ISO file you've already downloaded</a>.</p>
-<br/><img src="screenshot1.jpg" alt="screenshot"/><br/>
+<br>
+<img src="screenshot1.jpg" alt="screenshot">
+<br>
 
-<h2><a id="install">Using</a></h2>
+<h2>Using Unetbootin</h2>
 
 <p>Select an ISO file or a distribution to download, select a target drive (USB Drive or Hard Disk), then reboot once done. If your USB drive doesn't show up, reformat it as FAT32.</p><br>
-<img src="screenshot2.jpg" alt="screenshot"/><br/><br/>
-<img src="screenshot3.jpg" alt="screenshot"/><br/><br/>
-<img src="screenshot4.jpg" alt="screenshot"/><br/><br/>
+<img src="screenshot2.jpg" alt="screenshot"><br><br>
+<img src="screenshot3.jpg" alt="screenshot"><br><br>
+<img src="screenshot4.jpg" alt="screenshot"><br><br>
 <p><i>If you used the "USB Drive" install mode</i>: After rebooting, <a rel="nofollow" href="http://pcsupport.about.com/od/tipstricks/ht/bootusbflash.htm">boot from the USB drive</a>. On PCs, this usually involves pressing a button such as Esc or F12 immediately after you turn on your computer, while on Macs, you should hold the Option key before OSX boots.</p>
 <p><i>If you used the "Hard Disk" install mode</i>: After rebooting, select the UNetbootin entry from the Windows Boot Menu.</p>
 
 <!--<p>&raquo; See <a href="https://github.com/unetbootin/unetbootin/wiki/guide">Live USB Creation Guide</a>.</p>-->
 
-<h2><a id="distros">Supported Distributions</a></h2>
+<h2>Supported Distributions</h2>
 <p>UNetbootin has built-in support for automatically downloading and loading the following distributions, though <a href="#other">installing other distributions</a> is also supported:</p>
 
 <div class="column">
-<ul>
-  <li><a rel="nofollow" href="http://www.ubuntu.com/">Ubuntu</a></li>
-  <li><a rel="nofollow" href="http://www.kubuntu.org/">Kubuntu</a></li>
-  <li><a rel="nofollow" href="http://xubuntu.org/">Xubuntu</a></li>
-  <li><a rel="nofollow" href="http://lubuntu.net/">Lubuntu</a></li>
-  <li><a rel="nofollow" href="http://www.debian.org/">Debian</a></li>
-  <li><a rel="nofollow" href="http://www.opensuse.org/">openSUSE</a></li>
-  <li><a rel="nofollow" href="http://www.archlinux.org/">Arch Linux</a></li>
-  <li><a rel="nofollow" href="http://www.damnsmalllinux.org/">Damn Small Linux</a></li>
-  <li><a rel="nofollow" href="http://www.slitaz.org/en/">SliTaz</a></li>
-  <!--<li><a href="http://www.gnewsense.org/">gNewSense</a>
-  </li>-->
-</ul>
+  <ul>
+    <li><a rel="nofollow" href="https://www.ubuntu.com/">Ubuntu</a></li>
+    <li><a rel="nofollow" href="https://www.kubuntu.org/">Kubuntu</a></li>
+    <li><a rel="nofollow" href="https://xubuntu.org/">Xubuntu</a></li>
+    <li><a rel="nofollow" href="http://lubuntu.net/">Lubuntu</a></li>
+    <li><a rel="nofollow" href="https://www.debian.org/">Debian</a></li>
+    <li><a rel="nofollow" href="https://www.opensuse.org/">openSUSE</a></li>
+    <li><a rel="nofollow" href="https://www.archlinux.org/">Arch Linux</a></li>
+    <li><a rel="nofollow" href="http://www.damnsmalllinux.org/">Damn Small Linux</a></li>
+    <li><a rel="nofollow" href="http://www.slitaz.org/en/">SliTaz</a></li>
+    <!--<li><a href="http://www.gnewsense.org/">gNewSense</a>
+    </li>-->
+  </ul>
+</div>
+<div class="column">
+  <ul>
+    <li><a rel="nofollow" href="https://linuxmint.com/">Linux Mint</a></li>
+    <li><a rel="nofollow" href="http://www.zenwalk.org/">Zenwalk</a></li>
+    <li><a rel="nofollow" href="https://www.slax.org/">Slax</a></li>
+    <li><a rel="nofollow" href="http://www.elivecd.org/">Elive</a></li>
+    <li><a rel="nofollow" href="https://www.centos.org/">CentOS</a></li>
+    <li><a rel="nofollow" href="https://www.freebsd.org/">FreeBSD</a></li>
+    <li><a rel="nofollow" href="https://www.netbsd.org/">NetBSD</a></li>
+  </ul>
 </div>
 <div class="column">
 <ul>
-  <li><a rel="nofollow" href="http://linuxmint.com/">Linux Mint</a></li>
-  <li><a rel="nofollow" href="http://www.zenwalk.org/">Zenwalk</a></li>
-  <li><a rel="nofollow" href="http://www.slax.org/">Slax</a></li>
-  <li><a rel="nofollow" href="http://www.dreamlinux.com.br/">Dreamlinux</a></li>
-  <li><a rel="nofollow" href="http://www.elivecd.org/">Elive</a></li>
-  <li><a rel="nofollow" href="http://www.centos.org/">CentOS</a></li>
-  <li><a rel="nofollow" href="http://www.mandriva.com/">Mandriva</a></li>
-  <li><a rel="nofollow" href="http://www.freebsd.org/">FreeBSD</a></li>
-  <li><a rel="nofollow" href="http://www.netbsd.org/">NetBSD</a></li>
-</ul>
-</div>
-<div class="column">
-<ul>
-  <li><a rel="nofollow" href="http://fedoraproject.org/">Fedora</a></li>
+  <li><a rel="nofollow" href="https://fedoraproject.org/">Fedora</a></li>
   <li><a rel="nofollow" href="http://www.pclinuxos.com/">PCLinuxOS</a></li>
-  <li><a rel="nofollow" href="http://www.sabayonlinux.org/">Sabayon Linux</a></li>
-  <li><a rel="nofollow" href="http://www.gentoo.org/">Gentoo</a></li>
+  <li><a rel="nofollow" href="https://www.sabayonlinux.org/">Sabayon Linux</a></li>
+  <li><a rel="nofollow" href="https://www.gentoo.org/">Gentoo</a></li>
   <li><a rel="nofollow" href="http://www.mepis.org/">MEPIS</a></li>
-  <li><a rel="nofollow" href="http://linuxconsole.org/">LinuxConsole</a></li>
-  <li><a rel="nofollow" href="http://frugalware.org/">Frugalware Linux</a></li>
+  <li><a rel="nofollow" href="https://linuxconsole.org/">LinuxConsole</a></li>
+  <li><a rel="nofollow" href="https://frugalware.org/">Frugalware Linux</a></li>
   <li><a rel="nofollow" href="http://www.xpud.org/">xPUD</a></li>
   <li><a rel="nofollow" href="http://www.puppylinux.org/">Puppy Linux</a></li>
-  <li><a rel="nofollow" href="https://www.3cx.com/">3CX</a></li>
 <!--
-  <li><a href="http://www.foresightlinux.org/">Foresight Linux</a><ul>
-    <li>1.4.2</li>
-    </ul>
-  </li>
--->
-<!--
-  <li><a href="http://www.vectorlinux.com/">VectorLinux</a><ul>
-    <li>5.9</li>
-    </ul>
-  </li>
--->
-<!--
-  <li><a href="http://www.slackware.com/">Slackware</a><ul>
-    <li>12.0</li>
-    </ul>
-  </li>
+  <li><a rel="nofollow" href="http://www.vectorlinux.com/">VectorLinux</a></li>
+  <li><a rel="nofollow" href="http://www.slackware.com/">Slackware</a></li>
 -->
 </ul>
 </div>
 
-<hr/>
+
+
+<hr>
 <p>UNetbootin can also be used to load various system utilities, including:</p>
 
 <div class="column">
 <ul>
-  <li><a rel="nofollow" href="http://partedmagic.com/">Parted Magic</a></li>
+  <li><a rel="nofollow" href="https://partedmagic.com/">Parted Magic</a></li>
   <li><a rel="nofollow" href="http://www.sysresccd.org">SystemRescueCD</a></li>
-  <li><a rel="nofollow" href="http://www.supergrubdisk.org/">Super Grub Disk</a></li>
+  <li><a rel="nofollow" href="https://www.supergrubdisk.org/">Super Grub Disk</a></li>
   <li><a rel="nofollow" href="http://www.freedrweb.com/livecd/">Dr.Web Antivirus</a></li>
 </ul>
 </div>
 <div class="column">
 <ul>
   <li><a rel="nofollow" href="ftp://ftp.f-secure.com/anti-virus/tools/Rescue%20CD/">F-Secure Rescue CD</a></li>
-  <li><a rel="nofollow" href="http://devbuilds.kaspersky-labs.com/devbuilds/RescueDisk/">Kaspersky Rescue Disk</a></li>
+  <li><a rel="nofollow" href="https://support.kaspersky.com/viruses/rescuedisk">Kaspersky Rescue Disk</a></li>
   <li><a rel="nofollow" href="http://www.backtrack-linux.org/">Backtrack</a></li>
   <li><a rel="nofollow" href="http://ophcrack.sourceforge.net/">Ophcrack</a></li>
 </ul>
 </div>
 <div class="column">
 <ul>
-  <li><a rel="nofollow" href="http://home.eunet.no/pnordahl/ntpasswd/">NTPasswd</a></li>
+  <li><a rel="nofollow" href="https://pogostick.net/~pnh/ntpasswd/">NTPasswd</a></li>
   <li><a rel="nofollow" href="http://gujin.sourceforge.net/">Gujin</a></li>
   <li><a rel="nofollow" href="http://sourceforge.net/projects/btmgr/">Smart Boot Manager</a></li>
   <li><a rel="nofollow" href="http://www.freedos.org/">FreeDOS</a></li>
 </ul>
 </div>
-<!-- Download End -->
 
-<b><a id="other">Installing Other Distributions Using UNetbootin</a></b>
 
-<p>Download and run UNetbootin, then select the "disk image" option and supply it with an ISO (CD image).</p>
 
-<br/>
-<img src="screenshot5.jpg" alt="screenshot"/><br/>
+
+<h3>Installing Other Distributions Using UNetbootin</h3><p>Download and run UNetbootin, then select the "disk image" option and supply it with an ISO (CD image).</p>
+
+<!-- Download End --><br>
+<img src="screenshot5.jpg" alt="screenshot"><br>
 
 <p>UNetbootin doesn't use distribution-specific rules for making your live USB drive, so most Linux ISO files should load correctly using this option. However, not all distributions support booting from USB, and some others require extra boot options or other modifications before they can boot from USB drives, so these ISO files will not work as-is. Also, ISO files for non-Linux operating systems have a different boot mechanism, so don't expect them to work either.</p>
 
-<h2><a id="faq">FAQs</a></h2>
+<h2 id="faq">FAQs</h2>
 
-<p><b>Distribution X isn't on the list of supported distributions, will it work?</b></p>
+<ph4>Distribution X isn't on the list of supported distributions, will it work?</h4>
 
-<p>&raquo; Maybe, see <a href="#other">Installing Other Distributions Using UNetbootin</a>.</p>
+<p>» Maybe, see <a href="#other">Installing Other Distributions Using UNetbootin</a>.</p>
 
-<p><b>UNetbootin isn't able to download the distribution, what should I do?</b></p>
+<h4>UNetbootin isn't able to download the distribution, what should I do?</h4>
 
 <p>Download the ISO straight from the website, then provide it to UNetbootin via the <a href="#other">diskimage option</a>.</p>
 
-<p><b>My USB stick isn't booting, what should I do?</b></p>
+<h4>My USB stick isn't booting, what should I do?</h4>
 
 <p><a rel="nofollow" href="http://www.wikihow.com/Format-FAT32">Reformat the USB drive as FAT32</a>, then use UNetbootin again to put your distribution on the USB stick.</p>
 
-<p><b>My USB stick/hard drive isn't detected, what should I do?</b></p>
+<h4>My USB stick/hard drive isn't detected, what should I do?</bh4>
 
 <p><a rel="nofollow" href="http://www.wikihow.com/Format-FAT32">Reformat the USB drive as FAT32</a>, then use UNetbootin again. If it still isn't showing up, use the <a href="https://github.com/unetbootin/unetbootin/wiki/commands#targetdrive">targetdrive command line option</a>.</p>
 
-<p><b>How do I use UNetbootin from the command line?</b></p>
+<h4>How do I use UNetbootin from the command line?</h4>
 
-<p>&raquo; See <a href="https://github.com/unetbootin/unetbootin/wiki/commands">UNetbootin Command Line Options</a>.</p>
+<p>» See <a href="https://github.com/unetbootin/unetbootin/wiki/commands">UNetbootin Command Line Options</a>.</p>
 
-<p><b>How does UNetbootin work, and what does it do?</b></p>
+<h4>How does UNetbootin work, and what does it do?</h4>
 
-<p>&raquo; See <a href="https://github.com/unetbootin/unetbootin/wiki/howitworks">How UNetbootin Works</a>.</p>
-<p>&raquo; See <a href="https://github.com/unetbootin/unetbootin/wiki/installmodes">USB Drive and Hard Disk Install Modes</a>.</p>
+<p>» See <a href="https://github.com/unetbootin/unetbootin/wiki/howitworks">How UNetbootin Works</a>.</p>
+<p>» See <a href="https://github.com/unetbootin/unetbootin/wiki/installmodes">USB Drive and Hard Disk Install Modes</a>.</p>
 
-<p><b>Where can I report bugs, submit patches, etc?</b></p>
+<h4>Where can I report bugs, submit patches, etc?</h4>
 
 <p>First, make sure you are using the latest version available on this website.</p>
 
 <!--<p>&raquo; See <a href="http://answers.launchpad.net/unetbootin">Launchpad Answers</a> to ask questions and get help.</p>
 <p>&raquo; See <a href="http://bugs.launchpad.net/unetbootin">Launchpad Bugs</a> to file a bug report.</p>-->
-<p>&raquo; See <a href="https://github.com/unetbootin/unetbootin/issues">Github Issues</a> to file a bug report.</p>
-<p>&raquo; See <a href="https://github.com/unetbootin/unetbootin/pulls">Github Pull Requests</a> to submit a patch.</p>
+<p>» See <a href="https://github.com/unetbootin/unetbootin/issues">Github Issues</a> to file a bug report.</p>
+<p>» See <a href="https://github.com/unetbootin/unetbootin/pulls">Github Pull Requests</a> to submit a patch.</p>
 
-<p><b>Does UNetbootin have any spyware, viruses, trojans, or other malware?</b></p>
-<p>
-No; though some anti-virus products (Kaspersky) raise "Trojan.generic" warnings due to the auto-uninstall feature, these are false positives. Just make sure you obtain UNetbootin from the <a href="http://sourceforge.net/project/showfiles.php?group_id=222386">official downloads page</a> on <a href="http://sourceforge.net/projects/unetbootin">Sourceforge</a> not some shady third-party source. If you're absolutely paranoid, you can check the source code and compile it yourself.
-<br/>
-</p>
+<h4>Does UNetbootin have any spyware, viruses, trojans, or other malware?</h4>
+<p>No; though some anti-virus products may raise "Trojan.generic" warnings due to the auto-uninstall feature, these are false positives. Just make sure you obtain UNetbootin from this site, not some shady third-party source. If you're absolutely paranoid, you can check the source code and compile it yourself.</p>
 
-<div style="float: right; display: right;">
-<img src="softpedia.png" width="170" height="116" alt="Certified by Softpedia.com" />
-<img src="lxf.png" alt="Linux Format Hottest Pick" />
+<div>
+  <img src="softpedia.png" alt="Certified by Softpedia.com" width="170" height="116">
+  <img src="lxf.png" alt="Linux Format Hottest Pick">
 </div>
 
-<b>What translations are available, and how can I use them?</b>
+<h4>What translations are available, and how can I use them?</h4>
 
 <p>A number of translations are included in the latest UNetbootin release. See the <a href="http://translations.launchpad.net/unetbootin/trunk/+pots/unetbootin">Translations Page</a> for the status of each.</p>
 <p>If a translation corresponding to your system's native language has already been included into UNetbootin, it should automatically load the corresponding translation. Alternatively, you can force the language to use via the <b>lang=es</b> command-line option, where you substitute <b>es</b> with the the 2-letter <a href="http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO 639-1 code</a> for your language.</p>
 
-<b>Can I help translate?</b>
+<h4>Can I help translate?</h4>
 
-<p>If you'd like to help translate this website, <a href="https://www.transifex.com/gkovacs/public/">join the project on Transifex</a> then edit translations either <a href="https://unetbootin.github.io/?transifex">on this website</a> or <a href="https://www.transifex.com/gkovacs/unetbootin-website/">on Transifex</a>.</p>
+<p>If you'd like to help translate this website, <a href="https://www.transifex.com/gkovacs/public/">join the project on Transifex</a>, then edit translations either <a href="https://unetbootin.github.io/?transifex">on this website</a> or <a href="https://www.transifex.com/gkovacs/unetbootin-website/">on Transifex</a>.</p>
 
 <p>If you'd like to help translate the UNetbootin program itself, please use <a href="http://translations.launchpad.net/unetbootin/trunk/+pots/unetbootin">Launchpad Translations</a>. If you are new to Launchpad, you will first have to join the corresponding <a href="http://translations.launchpad.net/+groups/ubuntu-translators">Ubuntu Translators</a> group for the language you intend to translate. For information on using the Launchpad Translations system, see the <a href="https://help.launchpad.net/Translations">translations help page</a>.</p>
-<p>&raquo; See <a href="https://github.com/unetbootin/unetbootin/wiki/translations">UNetbootin Translations</a></p>
+<p>» See <a href="https://github.com/unetbootin/unetbootin/wiki/translations">UNetbootin Translations</a></p>
 
-<p><b>Removal Instructions (Applicable only to Hard Disk installs)</b></p>
+<h4>Removal Instructions (Applicable only to Hard Disk installs)</h4>
 
 <p>If using Windows, UNetbootin should prompt you to remove it the next time you boot into Windows. Alternatively, you can remove it via Add/Remove Programs in the Control Panel.</p>
 <p>If using Linux, re-run the UNetbootin executable (with root priveledges), and press OK when prompted to uninstall.</p>
@@ -384,18 +262,18 @@ No; though some anti-virus products (Kaspersky) raise "Trojan.generic" warnings 
 <p>Uninstalling UNetbootin simply removes the UNetbootin entry from your boot menu; if you installed an operating system to a partition using UNetbootin, removing UNetbootin will not remove the OS.</p>
 <p>To manually remove a Linux installation, you will have to restore the Windows bootloader using "fixmbr" from a recovery CD, and use Parted Magic to delete the Linux partition and expand the Windows partition.</p>
 
-<p><b>Where's the source code, and how can I compile or modify it?</b></p>
+<h4>Where's the source code, and how can I compile or modify it?</h4>
 
-<p>Source code is on <a href="https://github.com/unetbootin/unetbootin">Github</a>, though you may prefer a <a href="https://github.com/unetbootin/unetbootin/releases/download/638/unetbootin-source-638.tar.gz">tarball</a>.</p>
+<p>Source code is on <a href="https://github.com/unetbootin/unetbootin">Github</a>, though you may prefer a <a href="https://github.com/unetbootin/unetbootin/releases/download/638/unetbootin-source-638.tar.gz">tarball of the latest release</a>.</p>
 
-<p>&raquo; See <a href="https://github.com/unetbootin/unetbootin/wiki/compile">Compiling UNetbootin</a>.</p>
-<p>&raquo; See <a href="https://github.com/unetbootin/unetbootin/wiki/commands">UNetbootin Command Line Options</a>.</p>
-<p>&raquo; See <a href="https://github.com/unetbootin/unetbootin/wiki/createplugin">Building a UNetbootin Plugin</a>.</p>
-<p>&raquo; See <a href="https://github.com/unetbootin/unetbootin/wiki/useplugin">Using a UNetbootin Plugin</a>.</p>
-<p>&raquo; See <a href="https://github.com/unetbootin/unetbootin/wiki/buildcustomversion">Building a Custom UNetbootin Version</a>.</p>
-<p>&raquo; See <a href="https://github.com/unetbootin/unetbootin/wiki/listcustomversion">List of Custom UNetbootin Versions and Plugins</a>.</p>
+<p>» See <a href="https://github.com/unetbootin/unetbootin/wiki/compile">Compiling UNetbootin</a>.</p>
+<p>» See <a href="https://github.com/unetbootin/unetbootin/wiki/commands">UNetbootin Command Line Options</a>.</p>
+<p>» See <a href="https://github.com/unetbootin/unetbootin/wiki/createplugin">Building a UNetbootin Plugin</a>.</p>
+<p>» See <a href="https://github.com/unetbootin/unetbootin/wiki/useplugin">Using a UNetbootin Plugin</a>.</p>
+<p>» See <a href="https://github.com/unetbootin/unetbootin/wiki/buildcustomversion">Building a Custom UNetbootin Version</a>.</p>
+<p>» See <a href="https://github.com/unetbootin/unetbootin/wiki/listcustomversion">List of Custom UNetbootin Versions and Plugins</a>.</p>
 
-<h2><a id="credits">License</a></h2>
+<h2 id="credits">License</h2>
 
 <p>UNetbootin was created and written by <!--<a href="http://hkn.eecs.berkeley.edu/~akovacs/">Arpad</a> and--> <a href="http://www.gkovacs.com/">Geza Kovacs</a> (Github: <a href="http://github.com/gkovacs">gkovacs</a>, Launchpad: <a href="https://launchpad.net/~gezakovacs">gezakovacs</a>, <a href="http://wiki.ubuntu.com/GezaKovacs">contact info</a>).</p>
 <p>Translators are listed on the <a href="https://github.com/unetbootin/unetbootin/wiki/translations">translations page</a>.</p>
@@ -403,12 +281,12 @@ No; though some anti-virus products (Kaspersky) raise "Trojan.generic" warnings 
 
 <h2>Other open-source projects from the creators of UNetbootin</h2>
 
-<br>
 <div>
-<a href="https://habitlab.stanford.edu/"><img src="habitlab-screenshot-200px.png" alt="HabitLab" style="border-radius: 5px; margin-right: 30px; float: left" width="200"></a>
-<div>
+  <a href="https://habitlab.stanford.edu/"><img src="habitlab-screenshot-200px.png" alt="HabitLab" style="border-radius: 5px; margin-right: 30px; float: left" width="200"></a>
+</div>
 
 <h3><a href="https://habitlab.stanford.edu/">HabitLab</a></h3>
+
 A Chrome extension to help you waste less time online (on sites like Facebook, Youtube, etc) by experimenting with different interventions (news feed blockers, comment hiders, and more) to find the ones that work best for you.
 
 <br><br>
@@ -422,14 +300,14 @@ A Chrome extension to help you waste less time online (on sites like Facebook, Y
 
 <br>
 
-<div style="text-align: center">
+<div style="display:block; text-align: center; clear: both;">
 
-<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=AM2VHRGU9QF9A&amp;lc=US&amp;item_name=UNetbootin%20Development&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted" target="_blank"><div style="font-size: 12px; color: #444; border: 1px solid #ccc; border-radius: 5px; display: inline-block; left: auto; right: auto; padding: 3px; font-weight: bold"><img src="paypal.png" style="float: left; padding-right: 5px;" alt="Donate via Paypal" />Donate via Paypal</div></a>
-<!-- <a href="https://www.paypal.me/unetbootin/5" target="_blank"><div style="font-size: 12px; color: #444; border: 1px solid #ccc; border-radius: 5px; display: inline-block; left: auto; right: auto; padding: 3px; font-weight: bold"><img src="paypal.png" style="float: left; padding-right: 5px;" alt="Donate via Paypal" />Donate via Paypal</div></a> -->
+  <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=AM2VHRGU9QF9A&amp;lc=US&amp;item_name=UNetbootin%20Development&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted" target="_blank"><div style="/*! font-size: 12px; */ /*! color: #444; */ border: 1px solid #ccc; border-radius: 5px; display: inline-block; left: auto; right: auto; padding: 5px; font-weight: bold;"><img src="paypal.svg" style="float: left; padding-right: 5px; height: 22px;" alt="Donate via Paypal">Donate via Paypal</div></a>
+  <!-- <a href="https://www.paypal.me/unetbootin/5" target="_blank"><div style="font-size: 12px; color: #444; border: 1px solid #ccc; border-radius: 5px; display: inline-block; left: auto; right: auto; padding: 3px; font-weight: bold"><img src="paypal.png" style="float: left; padding-right: 5px;" alt="Donate via Paypal" />Donate via Paypal</div></a> -->
 
-<a href="https://coinbase.com/checkouts/b6c03143c5843875d41731764c1b89ad" target="_blank"><div style="font-size: 12px; color: #444; border: 1px solid #ccc; border-radius: 5px; display: inline-block; left: auto; right: auto; padding: 3px; font-weight: bold"><img src="bitcoin.png" style="float: left; padding-right: 5px" alt="Donate via Bitcoin" />Donate via Bitcoin</div></a>
+  <a href="https://coinbase.com/checkouts/b6c03143c5843875d41731764c1b89ad" target="_blank"><div style="/*! font-size: 12px; */ /*! color: #444; */ border: 1px solid #ccc; border-radius: 5px; display: inline-block; left: auto; right: auto; padding: 5px; font-weight: bold"><img src="bitcoin.png" style="float: left; padding-right: 5px" alt="Donate via Bitcoin">Donate via Bitcoin</div></a>
 
-<a href="https://venmo.com/?txn=pay&amp;recipients=gezak&amp;amount=5.00&amp;note=for%20UNetbootin%20Development&amp;audience=public" target="_blank"><div style="font-size: 12px; color: #444; border: 1px solid #ccc; border-radius: 5px; display: inline-block; left: auto; right: auto; padding: 3px; font-weight: bold"><img src="venmo.png" style="float: left; padding-right: 5px" alt="Donate via Venmo" />Donate via Venmo</div></a>
+  <a href="https://venmo.com/?txn=pay&amp;recipients=gezak&amp;amount=5.00&amp;note=for%20UNetbootin%20Development&amp;audience=public" target="_blank"><div style="/*! font-size: 12px; */ /*! color: #444; */ border: 1px solid #ccc; border-radius: 5px; display: inline-block; left: auto; right: auto; padding: 5px; font-weight: bold"><img src="venmo.png" style="float: left; padding-right: 5px" alt="Donate via Venmo">Donate via Venmo</div></a>
 
 <!--
 <a href="https://flattr.com/submit/auto?user_id=gezak&amp;url=https%3A%2F%2Funetbootin.github.io%2F" target="_blank"><div style="font-size: 12px; color: #444; border: 1px solid #ccc; border-radius: 5px; display: inline-block; left: auto; right: auto; padding: 3px; font-weight: bold"><img src="flattr.png" alt="Flattr this" title="Flattr this" style="float: left; padding-right: 5px;" />Flattr this</div></a>
@@ -440,7 +318,7 @@ A Chrome extension to help you waste less time online (on sites like Facebook, Y
 </div>
 <!-- End Main Content -->
 
-<script>
+<script async="" src="https://www.google-analytics.com/analytics.js"></script><script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -469,6 +347,4 @@ var add_translate_timer = setInterval(function() {
 
 </script>
 
-</body>
-
-</html>
+<div id="tx-live-lang-container" class="txlive-langselector txlive-langselector-bottomleft"><ul id="tx-live-lang-picker" class="txlive-langselector-list notranslate"><li data-value="en">English</li><li data-value="zh_CN">中文 (中国)</li><li data-value="nl">Nederlands</li><li data-value="fr">Français</li><li data-value="ru">Русский</li><li data-value="tr">Türkçe</li><li onclick="window.location.href=&quot;https://www.transifex.com/gkovacs/unetbootin-website/&quot;" data-value="en">Translate</li></ul><div class="txlive-langselector-toggle notranslate" id="tx-live-lang-toggle"><span class="txlive-langselector-current" id="tx-live-lang-current">English</span><span class="txlive-langselector-marker"></span></div></div></body></html>
