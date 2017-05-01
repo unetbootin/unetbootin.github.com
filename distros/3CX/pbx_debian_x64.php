@@ -22,7 +22,7 @@ $realurl = $matches[1];
 $realurl_http = str_replace("https://", "http://", $realurl);
 //$realurl = curl_getinfo($ch, CURLINFO_EFFECTIVE_URL);
 //print($response);
+echo $realurl_http;
+//header( 'Location: ' . $realurl_http  ) ;
 curl_close($ch);
-//echo $realurl;
-header( 'Location: ' . $realurl_http  ) ;
 ?>
