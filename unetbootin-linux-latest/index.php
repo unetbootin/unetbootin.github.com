@@ -1,3 +1,3 @@
 <?php
-header( 'Location: https://github.com/unetbootin/unetbootin/releases/download/652/unetbootin-linux-652.bin' ) ;
+header( 'Location: https://github.com/unetbootin/unetbootin/releases/download/647/unetbootin-linux-647.bin' ) ;
 ?>
