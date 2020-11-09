@@ -1,3 +1,3 @@
 <?php
-header( 'Location: https://github.com/unetbootin/unetbootin/releases/download/681/unetbootin-mac-681.dmg' ) ;
+header( 'Location: https://github.com/unetbootin/unetbootin/releases/download/700/unetbootin-mac-700.dmg' ) ;
 ?>
