@@ -9,7 +9,7 @@
   <link href="style.css" rel="stylesheet" type="text/css" />
   <link rel="shortcut icon" href="favicon.ico">
   <style type="text/css">.txlive {display: none;}</style>
-  <script type="text/javascript" src="https://cdn.transifex.com/cdbb199282754614bb488676c54fcc7b/latest/manifest.jsonp"></script>
+  <!-- <script type="text/javascript" src="https://cdn.transifex.com/cdbb199282754614bb488676c54fcc7b/latest/manifest.jsonp"></script> -->
   <style type="text/css">
 .txlive-langselector { position:fixed;z-index:999999;min-width: 120px;line-height:32px;background-color:rgba( 0,0,0,0.75 );box-shadow: 0 0 4px rgba( 0,0,0,0.3 );color: #fff;font-size: 14px;font-family: inherit; }
 .txlive-langselector * { margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;border-radius: 0;-moz-border-radius:0;-webkit-border-radius:0;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-border-radius:0;opacity:1; }
@@ -315,7 +315,69 @@
 </div>
 <!-- End Main Content -->
 
-<script async="" src="https://www.google-analytics.com/analytics.js"></script><script>
+<!-- <div style="position: fixed; bottom: 0px; left: 0px; background-color: darkred; border-color: white; border-width: 1px; border-style: solid; padding: 10px" id="languageselect">English</div> -->
+
+<style>
+  a {
+    text-decoration: none;
+  }
+
+  #tx-live-lang-picker {
+    overflow-y: auto;
+    max-height: 385px;
+  }
+
+  .qual-container-outer {
+    /* display: block; */
+    display: none;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+  }
+  .qual-container {
+    display: inline-block;
+    line-height: 32px;
+    background-color: rgba( 0,0,0,1 );
+    /* background-color: rgba( 0,0,0,0.75 ); */
+    box-shadow: 0 0 4px rgba( 0,0,0,0.3 );
+    color: #fff;
+    font-size: 14px;
+    border-radius: 0 2px 0 0;
+    -webkit-border-radius: 0 2px 0 0;
+  }
+  .qual-innerdiv {
+    display: inline-block;
+    text-align: center;
+    /* height: 36px; */
+    line-height: 32px;
+    padding: 1px 16px;
+    border-bottom: 2px solid #006f9f;
+    /* background-color: darkred;
+    border-color: white;
+    border-width: 1px;
+    border-style: solid;
+    padding: 10px; */
+  }
+
+  #stars {
+    color: white;
+    cursor: pointer;
+  }
+
+</style>
+
+<div class="qual-container-outer notranslate" id="helpful_container">
+<div class="qual-container">
+<div class="qual-innerdiv" id="helpful"><span id="was_this_page_helpful">Was this page helpful?</span> <span id="stars"><span id="star0">☆</span> <span id="star1">☆</span> <span id="star2">☆</span> <span id="star3">☆</span> <span id="star4">☆</span></span> <a href="#" id="view_in_english_link" onclick="viewInNextBestLang()"><span id="view_eng_lang_emoji">🇺🇸</span> <span id="view_eng_lang_name">English</span></a></div>
+</div>
+</div>
+
+<script src="match_info_list.js"></script>
+<script src="index.js"></script>
+<!-- <script src="cld3.js"></script> -->
+
+
+<!-- <script async="" src="https://www.google-analytics.com/analytics.js"></script><script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -323,12 +385,12 @@
 
   ga('create', 'UA-62588527-6', 'auto');
   ga('send', 'pageview');
-</script>
+</script> -->
 
-<script type="text/javascript">window.liveSettings={api_key:"cdbb199282754614bb488676c54fcc7b"}</script>
-<script type="text/javascript" src="//cdn.transifex.com/live.js"></script>
+<!-- <script type="text/javascript">window.liveSettings={api_key:"cdbb199282754614bb488676c54fcc7b"}</script>
+<script type="text/javascript" src="//cdn.transifex.com/live.js"></script> -->
 
-<script>
+<!-- <script>
 
 var add_translate_timer = setInterval(function() {
   var language_picker = document.getElementById('tx-live-lang-picker')
@@ -342,10 +404,14 @@ var add_translate_timer = setInterval(function() {
   }
 }, 1000);
 
-</script>
+</script> -->
 
-<div id="tx-live-lang-container" class="txlive-langselector txlive-langselector-bottomleft">
+<div id="tx-live-lang-container" class="txlive-langselector txlive-langselector-bottomleft notranslate">
   <ul id="tx-live-lang-picker" class="txlive-langselector-list notranslate">
+    <!-- <li data-value="en">English</li>
+    <li data-value="nl">Nederlands</li> -->
+  </ul>
+  <!-- <ul id="tx-live-lang-picker" class="txlive-langselector-list notranslate">
     <li data-value="en">English</li>
     <li data-value="zh_CN">中文 (中国)</li>
     <li data-value="nl">Nederlands</li>
@@ -355,10 +421,10 @@ var add_translate_timer = setInterval(function() {
     <li data-value="de">Deutsch</li>
     <li data-value="pt">Português</li>
     <li onclick="window.location.href=&quot;https://www.transifex.com/gkovacs/unetbootin-website/&quot;" data-value="en">Translate</li>
-  </ul>
-  <div class="txlive-langselector-toggle notranslate" id="tx-live-lang-toggle">
-    <span class="txlive-langselector-current" id="tx-live-lang-current">English</span>
-    <span class="txlive-langselector-marker"></span>
+  </ul> -->
+  <div class="txlive-langselector-toggle notranslate" id="tx-live-lang-toggle" onmousedown="langSelectorMouseDown()">
+    <span class="txlive-langselector-current notranslate" id="tx-live-lang-current">English</span>
+    <span class="txlive-langselector-marker notranslate"></span>
   </div>
 </div>
 
