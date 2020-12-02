@@ -232,7 +232,7 @@ function addLog(eventType, data, callback, timeLimit) {
     data.MtLang = mtLang
   }
   // user id and session id also send
-  var dataVersion = 1;
+  var dataVersion = 2;
   var time = Date.now();
   var insert_id = generateUUID();
   var rows = {
@@ -301,7 +301,7 @@ function strip_html_tags(str) {
 }
 
 function remove_spaces(str) {
-  return str.split('&nbsp').join('').split(new RegExp('\\s+')).join('')
+  return str.split('&nbsp;').join('').split(new RegExp('\\s+')).join('')
 }
 
 function text_equal(str1, str2) {
@@ -567,6 +567,31 @@ runOnceAvailable('img[src="venmo.svg"]', function() {
   });
 });
 
+setTimeout(function() {
+  runOnceAvailable('a[trcl]', function() {
+    var trcl_list = document.querySelectorAll('a[trcl]');
+    for (var i = 0; i < trcl_list.length; ++i) {
+      var trcl = trcl_list[i];
+      (function (trcl) {
+        var url = trcl.getAttribute('href');
+        var is_local = url.startsWith('#');
+        if (is_local) {
+          trcl.addEventListener('click', function(evt) {
+            addLog('ClickLink', {'Url': trcl.getAttribute('href'), 'Name': trcl.getAttribute('trcl')});
+          });
+        } else {
+          trcl.addEventListener('click', function(evt) {
+            addLog('ClickLink', {'Url': trcl.getAttribute('href'), 'Name': trcl.getAttribute('trcl')}, function() {
+              window.location = trcl.getAttribute('href');
+            }, 500);
+            evt.preventDefault();
+          });
+        }
+      })(trcl);
+    }
+  });
+}, 1000);
+
 function closeLangPicker() {
   var langpicker = document.querySelector('#tx-live-lang-picker')
   if (langpicker.classList.contains('txlive-langselector-list-opened')) {
@@ -741,6 +766,10 @@ setInterval(function() {
 }, 1000)
 
 function sendData(rows, data, callback, timeLimit) {
+  console.log(rows)
+  console.log(data)
+  callback()
+  return
   var haveRunCallback = false;
   var cbname = 'cb' + Math.floor(Math.random() * 2147483647)
   var script_tag = document.createElement('script');

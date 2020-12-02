@@ -43,7 +43,7 @@
 
 <div id="container">
 
-  <a href="https://habitlab.stanford.edu">
+  <a href="https://habitlab.stanford.edu" tracked="habitlab_top">
     <div translatable="true" style="display: inline-block; border-radius: 5px; padding: 5px; background-color: yellow; color: black" id="habitlabmsg">From the makers of UNetbootin: <span style="font-weight: bold">HabitLab</span>, a tool to help you waste less time online (for Chrome)</div>
   </a>
 
@@ -51,12 +51,12 @@
 <h1 style="margin-bottom: 0.2em">UNetbootin</h1>
 
 <div>
-  <a class="boxlink" href="#features" translatable="true">Features</a>
-  <a class="boxlink" href="#install" translatable="true">Using</a>
-  <a class="boxlink" href="#distros" translatable="true">Supported Distributions</a>
-  <a class="boxlink" href="#faq" translatable="true">FAQs</a>
-  <a class="boxlink" href="#credits" translatable="true">License</a>
-  <a class="boxlink" href="https://github.com/unetbootin/unetbootin/wiki/Home/" translatable="true">Wiki</a>
+  <a class="boxlink" href="#features" translatable="true" trcl="features_topbar">Features</a>
+  <a class="boxlink" href="#install" translatable="true" trcl="install_topbar">Using</a>
+  <a class="boxlink" href="#distros" translatable="true" trcl="distros_topbar">Supported Distributions</a>
+  <a class="boxlink" href="#faq" translatable="true" trcl="faqs_topbar">FAQs</a>
+  <a class="boxlink" href="#credits" translatable="true" trcl="credits_topbar">License</a>
+  <a class="boxlink" href="https://github.com/unetbootin/unetbootin/wiki/Home/" translatable="true" trcl="wiki_topbar">Wiki</a>
 </div>
 
 <div style="text-align: center; clear: both;margin: 0 auto;display: inline-block;">
@@ -84,7 +84,7 @@
 
 <p translatable="true">UNetbootin allows you to create bootable Live USB drives for Ubuntu and other Linux distributions without burning a CD.</p>
 
-<p translatable="true">You can either let UNetbootin download one of the many <a href="#distros">distributions supported out-of-the-box</a> for you, or <a href="#other">supply your own Linux .iso file</a>.</p>
+<p translatable="true">You can either let UNetbootin download one of the many <a href="#distros" trcl="distros_2">distributions supported out-of-the-box</a> for you, or <a href="#other" trcl="other">supply your own Linux .iso file</a>.</p>
 
 <!-- Introduction End -->
 
@@ -98,8 +98,8 @@
 
 <h2 translatable="true" id="features">Features</h2>
 
-<p translatable="true">UNetbootin can create a bootable <a rel="nofollow" href="https://en.wikipedia.org/wiki/Live_USB">Live USB</a> drive</p>
-<p translatable="true">It loads distributions either by downloading a ISO (CD image) files for you, or by <a href="#other">using an ISO file you've already downloaded</a>.</p>
+<p translatable="true">UNetbootin can create a bootable <a rel="nofollow" href="https://en.wikipedia.org/wiki/Live_USB" trcl="wp_liveusb">Live USB</a> drive</p>
+<p translatable="true">It loads distributions either by downloading a ISO (CD image) files for you, or by <a href="#other" trcl="other_2">using an ISO file you've already downloaded</a>.</p>
 <br>
 <img src="screenshot1.jpg" alt="screenshot">
 <br>
@@ -110,53 +110,53 @@
 <img src="screenshot2.jpg" alt="screenshot"><br><br>
 <img src="screenshot3.jpg" alt="screenshot"><br><br>
 <img src="screenshot4.jpg" alt="screenshot"><br><br>
-<p translatable="true"><i>If you used the "USB Drive" install mode</i>: After rebooting, <a rel="nofollow" href="http://pcsupport.about.com/od/tipstricks/ht/bootusbflash.htm">boot from the USB drive</a>. On PCs, this usually involves pressing a button such as Esc or F12 immediately after you turn on your computer, while on Macs, you should hold the Option key before OSX boots.</p>
+<p translatable="true"><i>If you used the "USB Drive" install mode</i>: After rebooting, <a rel="nofollow" href="http://pcsupport.about.com/od/tipstricks/ht/bootusbflash.htm" trcl="pcsupport_boot_usb">boot from the USB drive</a>. On PCs, this usually involves pressing a button such as Esc or F12 immediately after you turn on your computer, while on Macs, you should hold the Option key before OSX boots.</p>
 <p translatable="true"><i>If you used the "Hard Disk" install mode</i>: After rebooting, select the UNetbootin entry from the Windows Boot Menu.</p>
 
 <!--<p>&raquo; See <a href="https://github.com/unetbootin/unetbootin/wiki/guide">Live USB Creation Guide</a>.</p>-->
 
 <h2 translatable="true" id="distros">Supported Distributions</h2>
 
-<p translatable="true">UNetbootin has built-in support for automatically downloading and loading the following distributions, though <a href="#other">installing other distributions</a> is also supported:</p>
+<p translatable="true">UNetbootin has built-in support for automatically downloading and loading the following distributions, though <a href="#other" trcl="other_3">installing other distributions</a> is also supported:</p>
 
 <div class="column">
   <ul>
-    <li><a rel="nofollow" href="https://www.ubuntu.com/">Ubuntu</a></li>
-    <li><a rel="nofollow" href="https://www.kubuntu.org/">Kubuntu</a></li>
-    <li><a rel="nofollow" href="https://xubuntu.org/">Xubuntu</a></li>
-    <li><a rel="nofollow" href="http://lubuntu.net/">Lubuntu</a></li>
-    <li><a rel="nofollow" href="https://www.debian.org/">Debian</a></li>
-    <li><a rel="nofollow" href="https://www.opensuse.org/">openSUSE</a></li>
-    <li><a rel="nofollow" href="https://www.archlinux.org/">Arch Linux</a></li>
-    <li><a rel="nofollow" href="http://www.damnsmalllinux.org/">Damn Small Linux</a></li>
-    <li><a rel="nofollow" href="http://www.slitaz.org/en/">SliTaz</a></li>
+    <li><a rel="nofollow" href="https://www.ubuntu.com/" trcl="ubuntu">Ubuntu</a></li>
+    <li><a rel="nofollow" href="https://www.kubuntu.org/" trcl="kubuntu">Kubuntu</a></li>
+    <li><a rel="nofollow" href="https://xubuntu.org/" trcl="xubuntu">Xubuntu</a></li>
+    <li><a rel="nofollow" href="http://lubuntu.net/" trcl="lubuntu">Lubuntu</a></li>
+    <li><a rel="nofollow" href="https://www.debian.org/" trcl="debian">Debian</a></li>
+    <li><a rel="nofollow" href="https://www.opensuse.org/" trcl="opensuse">openSUSE</a></li>
+    <li><a rel="nofollow" href="https://www.archlinux.org/" trcl="archlinux">Arch Linux</a></li>
+    <li><a rel="nofollow" href="http://www.damnsmalllinux.org/" trcl="dslinux">Damn Small Linux</a></li>
+    <li><a rel="nofollow" href="http://www.slitaz.org/en/" trcl="slitaz">SliTaz</a></li>
     <!--<li><a href="http://www.gnewsense.org/">gNewSense</a>
     </li>-->
   </ul>
 </div>
 <div class="column">
   <ul>
-    <li><a rel="nofollow" href="https://linuxmint.com/">Linux Mint</a></li>
-    <li><a rel="nofollow" href="http://www.zenwalk.org/">Zenwalk</a></li>
-    <li><a rel="nofollow" href="https://www.slax.org/">Slax</a></li>
-    <li><a rel="nofollow" href="http://www.elivecd.org/">Elive</a></li>
-    <li><a rel="nofollow" href="https://www.centos.org/">CentOS</a></li>
-    <li><a rel="nofollow" href="https://www.freebsd.org/">FreeBSD</a></li>
-    <li><a rel="nofollow" href="https://www.netbsd.org/">NetBSD</a></li>
-    <li><a rel="nofollow" href="https://www.3cx.org/">3CX</a></li>
+    <li><a rel="nofollow" href="https://linuxmint.com/" trcl="linuxmint">Linux Mint</a></li>
+    <li><a rel="nofollow" href="http://www.zenwalk.org/" trcl="zenwalk">Zenwalk</a></li>
+    <li><a rel="nofollow" href="https://www.slax.org/" trcl="slax">Slax</a></li>
+    <li><a rel="nofollow" href="http://www.elivecd.org/" trcl="elive">Elive</a></li>
+    <li><a rel="nofollow" href="https://www.centos.org/" trcl="centos">CentOS</a></li>
+    <li><a rel="nofollow" href="https://www.freebsd.org/" trcl="freebsd">FreeBSD</a></li>
+    <li><a rel="nofollow" href="https://www.netbsd.org/" trcl="netbsd">NetBSD</a></li>
+    <li><a rel="nofollow" href="https://www.3cx.org/" trcl="3cx">3CX</a></li>
   </ul>
 </div>
 <div class="column">
 <ul>
-  <li><a rel="nofollow" href="https://fedoraproject.org/">Fedora</a></li>
-  <li><a rel="nofollow" href="http://www.pclinuxos.com/">PCLinuxOS</a></li>
-  <li><a rel="nofollow" href="https://www.sabayonlinux.org/">Sabayon Linux</a></li>
-  <li><a rel="nofollow" href="https://www.gentoo.org/">Gentoo</a></li>
-  <li><a rel="nofollow" href="http://www.mepis.org/">MEPIS</a></li>
-  <li><a rel="nofollow" href="https://linuxconsole.org/">LinuxConsole</a></li>
-  <li><a rel="nofollow" href="https://frugalware.org/">Frugalware Linux</a></li>
-  <li><a rel="nofollow" href="http://www.xpud.org/">xPUD</a></li>
-  <li><a rel="nofollow" href="http://www.puppylinux.org/">Puppy Linux</a></li>
+  <li><a rel="nofollow" href="https://fedoraproject.org/" trcl="fedora">Fedora</a></li>
+  <li><a rel="nofollow" href="http://www.pclinuxos.com/" trcl="pclinuxos">PCLinuxOS</a></li>
+  <li><a rel="nofollow" href="https://www.sabayonlinux.org/" trcl="sabayon">Sabayon Linux</a></li>
+  <li><a rel="nofollow" href="https://www.gentoo.org/" trcl="gentoo">Gentoo</a></li>
+  <li><a rel="nofollow" href="http://www.mepis.org/" trcl="mepis">MEPIS</a></li>
+  <li><a rel="nofollow" href="https://linuxconsole.org/" trcl="linuxconsole">LinuxConsole</a></li>
+  <li><a rel="nofollow" href="https://frugalware.org/" trcl="frugalware">Frugalware Linux</a></li>
+  <li><a rel="nofollow" href="http://www.xpud.org/" trcl="xpud">xPUD</a></li>
+  <li><a rel="nofollow" href="http://www.puppylinux.org/" trcl="puppylinux">Puppy Linux</a></li>
 <!--
   <li><a rel="nofollow" href="http://www.vectorlinux.com/">VectorLinux</a></li>
   <li><a rel="nofollow" href="http://www.slackware.com/">Slackware</a></li>
@@ -171,26 +171,26 @@
 
 <div class="column">
 <ul>
-  <li><a rel="nofollow" href="https://partedmagic.com/">Parted Magic</a></li>
-  <li><a rel="nofollow" href="http://www.sysresccd.org">SystemRescueCD</a></li>
-  <li><a rel="nofollow" href="https://www.supergrubdisk.org/">Super Grub Disk</a></li>
-  <li><a rel="nofollow" href="http://www.freedrweb.com/livecd/">Dr.Web Antivirus</a></li>
+  <li><a rel="nofollow" href="https://partedmagic.com/" trcl="partedmagic">Parted Magic</a></li>
+  <li><a rel="nofollow" href="http://www.sysresccd.org" trcl="systemrescuecd">SystemRescueCD</a></li>
+  <li><a rel="nofollow" href="https://www.supergrubdisk.org/" trcl="supergrubdisk">Super Grub Disk</a></li>
+  <li><a rel="nofollow" href="http://www.freedrweb.com/livecd/" trcl="drweb">Dr.Web Antivirus</a></li>
 </ul>
 </div>
 <div class="column">
 <ul>
-  <li><a rel="nofollow" href="ftp://ftp.f-secure.com/anti-virus/tools/Rescue%20CD/">F-Secure Rescue CD</a></li>
-  <li><a rel="nofollow" href="https://support.kaspersky.com/viruses/rescuedisk">Kaspersky Rescue Disk</a></li>
-  <li><a rel="nofollow" href="http://www.backtrack-linux.org/">Backtrack</a></li>
-  <li><a rel="nofollow" href="http://ophcrack.sourceforge.net/">Ophcrack</a></li>
+  <li><a rel="nofollow" href="ftp://ftp.f-secure.com/anti-virus/tools/Rescue%20CD/" trcl="fsecure">F-Secure Rescue CD</a></li>
+  <li><a rel="nofollow" href="https://support.kaspersky.com/viruses/rescuedisk" trcl="kaspersky">Kaspersky Rescue Disk</a></li>
+  <li><a rel="nofollow" href="http://www.backtrack-linux.org/" trcl="backtrack">Backtrack</a></li>
+  <li><a rel="nofollow" href="http://ophcrack.sourceforge.net/" trcl="ophcrack">Ophcrack</a></li>
 </ul>
 </div>
 <div class="column">
 <ul>
-  <li><a rel="nofollow" href="https://pogostick.net/~pnh/ntpasswd/">NTPasswd</a></li>
-  <li><a rel="nofollow" href="http://gujin.sourceforge.net/">Gujin</a></li>
-  <li><a rel="nofollow" href="http://sourceforge.net/projects/btmgr/">Smart Boot Manager</a></li>
-  <li><a rel="nofollow" href="http://www.freedos.org/">FreeDOS</a></li>
+  <li><a rel="nofollow" href="https://pogostick.net/~pnh/ntpasswd/" trcl="ntpasswd">NTPasswd</a></li>
+  <li><a rel="nofollow" href="http://gujin.sourceforge.net/" trcl="gujin">Gujin</a></li>
+  <li><a rel="nofollow" href="http://sourceforge.net/projects/btmgr/" trcl="smartbootmanager">Smart Boot Manager</a></li>
+  <li><a rel="nofollow" href="http://www.freedos.org/" trcl="freedos">FreeDOS</a></li>
 </ul>
 </div>
 
@@ -210,28 +210,28 @@
 
 <h4 translatable="true">Distribution X isn't on the list of supported distributions, will it work?</h4>
 
-<p translatable="true">» Maybe, see <a href="#other">Installing Other Distributions Using UNetbootin</a>.</p>
+<p translatable="true">» Maybe, see <a href="#other" trcl="other_4">Installing Other Distributions Using UNetbootin</a>.</p>
 
 <h4 translatable="true">UNetbootin isn't able to download the distribution, what should I do?</h4>
 
-<p translatable="true">Download the ISO straight from the website, then provide it to UNetbootin via the <a href="#other">diskimage option</a>.</p>
+<p translatable="true">Download the ISO straight from the website, then provide it to UNetbootin via the <a href="#other" trcl="other_5">diskimage option</a>.</p>
 
 <h4 translatable="true">My USB stick isn't booting, what should I do?</h4>
 
-<p translatable="true"><a rel="nofollow" href="http://www.wikihow.com/Format-FAT32">Reformat the USB drive as FAT32</a>, then use UNetbootin again to put your distribution on the USB stick.</p>
+<p translatable="true"><a rel="nofollow" href="http://www.wikihow.com/Format-FAT32" trcl="wikihowfat32">Reformat the USB drive as FAT32</a>, then use UNetbootin again to put your distribution on the USB stick.</p>
 
 <h4 translatable="true">My USB stick/hard drive isn't detected, what should I do?</h4>
 
-<p translatable="true"><a rel="nofollow" href="http://www.wikihow.com/Format-FAT32">Reformat the USB drive as FAT32</a>, then use UNetbootin again. If it still isn't showing up, use the <a href="https://github.com/unetbootin/unetbootin/wiki/commands#targetdrive">targetdrive command line option</a>.</p>
+<p translatable="true"><a rel="nofollow" href="http://www.wikihow.com/Format-FAT32" trcl="wikihowfat32_2">Reformat the USB drive as FAT32</a>, then use UNetbootin again. If it still isn't showing up, use the <a href="https://github.com/unetbootin/unetbootin/wiki/commands#targetdrive" trcl="commands_targetdrive">targetdrive command line option</a>.</p>
 
 <h4 translatable="true">How do I use UNetbootin from the command line?</h4>
 
-<p translatable="true">» See <a href="https://github.com/unetbootin/unetbootin/wiki/commands">UNetbootin Command Line Options</a>.</p>
+<p translatable="true">» See <a href="https://github.com/unetbootin/unetbootin/wiki/commands" trcl="commands">UNetbootin Command Line Options</a>.</p>
 
 <h4 translatable="true">How does UNetbootin work, and what does it do?</h4>
 
-<p translatable="true">» See <a href="https://github.com/unetbootin/unetbootin/wiki/howitworks">How UNetbootin Works</a>.</p>
-<p translatable="true">» See <a href="https://github.com/unetbootin/unetbootin/wiki/installmodes">USB Drive and Hard Disk Install Modes</a>.</p>
+<p translatable="true">» See <a href="https://github.com/unetbootin/unetbootin/wiki/howitworks" trcl="howitworks">How UNetbootin Works</a>.</p>
+<p translatable="true">» See <a href="https://github.com/unetbootin/unetbootin/wiki/installmodes" trcl="installmodes">USB Drive and Hard Disk Install Modes</a>.</p>
 
 <h4 translatable="true">Where can I report bugs, submit patches, etc?</h4>
 
@@ -239,8 +239,8 @@
 
 <!--<p>&raquo; See <a href="http://answers.launchpad.net/unetbootin">Launchpad Answers</a> to ask questions and get help.</p>
 <p>&raquo; See <a href="http://bugs.launchpad.net/unetbootin">Launchpad Bugs</a> to file a bug report.</p>-->
-<p translatable="true">» See <a href="https://github.com/unetbootin/unetbootin/issues">Github Issues</a> to file a bug report.</p>
-<p translatable="true">» See <a href="https://github.com/unetbootin/unetbootin/pulls">Github Pull Requests</a> to submit a patch.</p>
+<p translatable="true">» See <a href="https://github.com/unetbootin/unetbootin/issues" trcl="issues">Github Issues</a> to file a bug report.</p>
+<p translatable="true">» See <a href="https://github.com/unetbootin/unetbootin/pulls" trcl="pulls">Github Pull Requests</a> to submit a patch.</p>
 
 <h4 translatable="true">Does UNetbootin have any spyware, viruses, trojans, or other malware?</h4>
 <p translatable="true">No; though some anti-virus products may raise "Trojan.generic" warnings due to the auto-uninstall feature, these are false positives. Just make sure you obtain UNetbootin from this site, not some shady third-party source. If you're absolutely paranoid, you can check the source code and compile it yourself.</p>
@@ -252,15 +252,15 @@
 
 <h4 translatable="true">What translations are available, and how can I use them?</h4>
 
-<p translatable="true">A number of translations are included in the latest UNetbootin release. See the <a href="http://translations.launchpad.net/unetbootin/trunk/+pots/unetbootin">Translations Page</a> for the status of each.</p>
+<p translatable="true">A number of translations are included in the latest UNetbootin release. See the <a href="http://translations.launchpad.net/unetbootin/trunk/+pots/unetbootin" trcl="lp_translations">Translations Page</a> for the status of each.</p>
 <p translatable="true">If a translation corresponding to your system's native language has already been included into UNetbootin, it should automatically load the corresponding translation. Alternatively, you can force the language to use via the <b>lang=es</b> command-line option, where you substitute <b>es</b> with the the 2-letter <a href="http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO 639-1 code</a> for your language.</p>
 
 <h4 translatable="true">Can I help translate?</h4>
 
-<p translatable="true">If you'd like to help translate this website, <a href="https://www.transifex.com/gkovacs/public/">join the project on Transifex</a>, then edit translations either <a href="https://unetbootin.github.io/?transifex">on this website</a> or <a href="https://www.transifex.com/gkovacs/unetbootin-website/">on Transifex</a>.</p>
+<p translatable="true">If you'd like to help translate this website, <a href="https://www.transifex.com/gkovacs/public/" trcl="transifex_project">join the project on Transifex</a>, then edit translations either <a href="https://unetbootin.github.io/?transifex" trcl="gh_transifex">on this website</a> or <a href="https://www.transifex.com/gkovacs/unetbootin-website/" trcl="transifex_unetbootin_website">on Transifex</a>.</p>
 
-<p translatable="true">If you'd like to help translate the UNetbootin program itself, please use <a href="http://translations.launchpad.net/unetbootin/trunk/+pots/unetbootin">Launchpad Translations</a>. If you are new to Launchpad, you will first have to join the corresponding <a href="http://translations.launchpad.net/+groups/ubuntu-translators">Ubuntu Translators</a> group for the language you intend to translate. For information on using the Launchpad Translations system, see the <a href="https://help.launchpad.net/Translations">translations help page</a>.</p>
-<p translatable="true">» See <a href="https://github.com/unetbootin/unetbootin/wiki/translations">UNetbootin Translations</a></p>
+<p translatable="true">If you'd like to help translate the UNetbootin program itself, please use <a href="http://translations.launchpad.net/unetbootin/trunk/+pots/unetbootin" trcl="lp_translations_2">Launchpad Translations</a>. If you are new to Launchpad, you will first have to join the corresponding <a href="http://translations.launchpad.net/+groups/ubuntu-translators" trcl="lp_ubuntu_translators">Ubuntu Translators</a> group for the language you intend to translate. For information on using the Launchpad Translations system, see the <a href="https://help.launchpad.net/Translations" trcl="lp_help_translations">translations help page</a>.</p>
+<p translatable="true">» See <a href="https://github.com/unetbootin/unetbootin/wiki/translations" trcl="translations">UNetbootin Translations</a></p>
 
 <h4 translatable="true">Removal Instructions (Applicable only to Hard Disk installs)</h4>
 
@@ -272,28 +272,28 @@
 
 <h4 translatable="true">Where's the source code, and how can I compile or modify it?</h4>
 
-<p translatable="true">Source code is on <a href="https://github.com/unetbootin/unetbootin">Github</a>, though you may prefer a <a href="unetbootin-source-latest.tar.gz">tarball of the latest release</a>.</p>
+<p translatable="true">Source code is on <a href="https://github.com/unetbootin/unetbootin" trcl="gh">Github</a>, though you may prefer a <a href="unetbootin-source-latest.tar.gz">tarball of the latest release</a>.</p>
 
-<p translatable="true">» See <a href="https://github.com/unetbootin/unetbootin/wiki/compile">Compiling UNetbootin</a>.</p>
-<p translatable="true">» See <a href="https://github.com/unetbootin/unetbootin/wiki/commands">UNetbootin Command Line Options</a>.</p>
-<p translatable="true">» See <a href="https://github.com/unetbootin/unetbootin/wiki/createplugin">Building a UNetbootin Plugin</a>.</p>
-<p translatable="true">» See <a href="https://github.com/unetbootin/unetbootin/wiki/useplugin">Using a UNetbootin Plugin</a>.</p>
-<p translatable="true">» See <a href="https://github.com/unetbootin/unetbootin/wiki/buildcustomversion">Building a Custom UNetbootin Version</a>.</p>
-<p translatable="true">» See <a href="https://github.com/unetbootin/unetbootin/wiki/listcustomversion">List of Custom UNetbootin Versions and Plugins</a>.</p>
+<p translatable="true">» See <a href="https://github.com/unetbootin/unetbootin/wiki/compile" trcl="compile">Compiling UNetbootin</a>.</p>
+<p translatable="true">» See <a href="https://github.com/unetbootin/unetbootin/wiki/commands" trcl="commands_2">UNetbootin Command Line Options</a>.</p>
+<p translatable="true">» See <a href="https://github.com/unetbootin/unetbootin/wiki/createplugin" trcl="createplugin">Building a UNetbootin Plugin</a>.</p>
+<p translatable="true">» See <a href="https://github.com/unetbootin/unetbootin/wiki/useplugin" trcl="useplugin">Using a UNetbootin Plugin</a>.</p>
+<p translatable="true">» See <a href="https://github.com/unetbootin/unetbootin/wiki/buildcustomversion" trcl="buildcustomversion">Building a Custom UNetbootin Version</a>.</p>
+<p translatable="true">» See <a href="https://github.com/unetbootin/unetbootin/wiki/listcustomversion" trcl="listcustomversion">List of Custom UNetbootin Versions and Plugins</a>.</p>
 
 <h2 translatable="true" id="credits">License</h2>
 
-<p translatable="true">UNetbootin was created and written by <a href="http://www.gkovacs.com/">Geza Kovacs</a> (Github: <a href="http://github.com/gkovacs">gkovacs</a>, Launchpad: <a href="https://launchpad.net/~gezakovacs">gezakovacs</a>, <a href="http://wiki.ubuntu.com/GezaKovacs">contact info</a>).</p>
-<p translatable="true">Translators are listed on the <a href="https://github.com/unetbootin/unetbootin/wiki/translations">translations page</a>.</p>
-<p translatable="true">UNetbootin is licensed under the <a href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html">GNU General Public License (GPL) Version 2</a> or <a href="http://www.gnu.org/copyleft/gpl.html">above</a>. Site materials, documentation, screenshots, and logos are licensed as <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-Share-Alike 3.0</a>.</p>
+<p translatable="true">UNetbootin was created and written by <a href="http://www.gkovacs.com/" trcl="gkovacs_homepage">Geza Kovacs</a> (Github: <a href="http://github.com/gkovacs" trcl="gh_gkovacs">gkovacs</a>, Launchpad: <a href="https://launchpad.net/~gezakovacs" trcl="lp_gezakovacs">gezakovacs</a>, <a href="http://wiki.ubuntu.com/GezaKovacs" trcl="ubuntu_wiki_gezakovacs">contact info</a>).</p>
+<p translatable="true">Translators are listed on the <a href="https://github.com/unetbootin/unetbootin/wiki/translations" trcl="translations_2">translations page</a>.</p>
+<p translatable="true">UNetbootin is licensed under the <a href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html" trcl="gplv2">GNU General Public License (GPL) Version 2</a> or <a href="http://www.gnu.org/copyleft/gpl.html" trcl="gplv3">above</a>. Site materials, documentation, screenshots, and logos are licensed as <a href="http://creativecommons.org/licenses/by-sa/3.0/" trcl="ccommons">Creative Commons Attribution-Share-Alike 3.0</a>.</p>
 
 <h2 translatable="true">Other open-source projects from the creators of UNetbootin</h2>
 
 <div>
-  <a href="https://habitlab.stanford.edu/"><img src="habitlab-screenshot-200px.png" alt="HabitLab" style="border-radius: 5px; margin-right: 30px; float: left" width="200"></a>
+  <a href="https://habitlab.stanford.edu/"><img src="habitlab-screenshot-200px.png" trcl="habitlab_2" alt="HabitLab" style="border-radius: 5px; margin-right: 30px; float: left" width="200"></a>
 </div>
 
-<h3><a href="https://habitlab.stanford.edu/">HabitLab</a></h3>
+<h3><a href="https://habitlab.stanford.edu/" trcl="habitlab_3">HabitLab</a></h3>
 
 <div translatable="true">A Chrome extension to help you waste less time online (on sites like Facebook, Youtube, etc) by experimenting with different interventions (news feed blockers, comment hiders, and more) to find the ones that work best for you. <br><br> <br></div>
 
