@@ -771,10 +771,6 @@ setInterval(function() {
 }, 1000)
 
 function sendData(rows, data, callback, timeLimit) {
-  console.log(rows)
-  console.log(data)
-  callback()
-  return
   var haveRunCallback = false;
   var cbname = 'cb' + Math.floor(Math.random() * 2147483647)
   var script_tag = document.createElement('script');
