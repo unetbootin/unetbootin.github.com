@@ -462,7 +462,8 @@ function viewInNextBestLang() {
 // }
 
 function getPreferredLanguage() {
-  for (var x of window.navigator.languages) {
+  for (var i = 0; i < window.navigator.languages.length; ++i) {
+    var x = window.navigator.languages[i];
     if (lang_names_list.indexOf(x) !== -1) {
       return x
     }
@@ -491,7 +492,8 @@ runOnceAvailable('#tx-live-lang-picker', function() {
   var langpicker = document.querySelector('#tx-live-lang-picker');
   //var langList = Object.keys(lang_names);
   //langList.sort((x,y) => lang_names[x].localeCompare(lang_names[y], 'en'));
-  for (var x of lang_names_list) {
+  for (var i = 0; i < lang_names_list.length; ++i) {
+    var x = lang_names_list[i];
     var newEntry = document.createElement('li');
     newEntry.setAttribute('data-value', x);
     newEntry.onclick = function() {
@@ -631,7 +633,8 @@ function onceLangDetectorAvailable(callback) {
 function detectLanguageCounts(text_list, callback) {
   onceLangDetectorAvailable(function() {
     var lang_to_counts = {}
-    for (var plain_text of text_list) {
+    for (var i = 0; i < text_list.length; ++i) {
+      var plain_text = text_list[i];
       var mt_lang = langdetector.findLanguage(plain_text).language
       if (lang_to_counts[mt_lang] === undefined) {
         lang_to_counts[mt_lang] = 1
@@ -685,18 +688,20 @@ setInterval(() => {
   }
   function processLangToCounts(lang_to_counts) {
     if (Object.keys(lang_to_counts).length > 0) {
-      var maxVal = 0
-      var curMaxKey = undefined
-      for (var key of Object.keys(lang_to_counts)) {
-        var val = lang_to_counts[key]
+      var maxVal = 0;
+      var curMaxKey = undefined;
+      var lang_list = Object.keys(lang_to_counts);
+      for (var i = 0; i < lang_list.length; ++i) {
+        var key = lang_list[i];
+        var val = lang_to_counts[key];
         if (val > maxVal) {
-          curMaxKey = key
-          maxVal = val
+          curMaxKey = key;
+          maxVal = val;
         }
       }
-      mtLang = curMaxKey
+      mtLang = curMaxKey;
     } else {
-      mtLang = undefined
+      mtLang = undefined;
     }
     if (mtLang !== prevMtLang) {
       if (mtLang !== undefined) {
