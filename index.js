@@ -215,24 +215,19 @@ var translation_condition_names = [
   'MT Eng',
   'No Tr',
 ]
-var translation_condition_name = translation_condition_names[translation_mode]
-console.log('translation mode = ' + translation_mode);
-console.log('human translation = ' + human_translation)
-console.log('browser language = ' + navigator.language);
-console.log('browser language preference list')
-console.log(navigator.languages)
+var translation_condition_name = translation_condition_names[translation_mode];
 
 function addLog(eventType, data, callback, timeLimit) {
   //console.log(eventType)
   //console.log(JSON.stringify(data))
   if (data.Lang === undefined) {
-    data.Lang = selectedLang
+    data.Lang = selectedLang;
   }
   if (data.MtLang === undefined && mtLang !== undefined) {
-    data.MtLang = mtLang
+    data.MtLang = mtLang;
   }
   // user id and session id also send
-  var dataVersion = 2;
+  var dataVersion = 3;
   var time = Date.now();
   var insert_id = generateUUID();
   var rows = {
@@ -403,7 +398,9 @@ function setSelectedLanguage(selected_lang) {
     // }
 
     if (translation_condition_name === 'No Tr') {
-      document.querySelector('#helpful_container').style.display = 'none';
+      document.querySelector('#view_eng_lang_name').style.display = 'none';
+      document.querySelector('#view_eng_lang_emoji').style.display = 'none';
+      document.querySelector('#helpful_container').style.display = 'block';
       document.querySelector('#tx-live-lang-container').style.display = 'none';
     } else {
       document.querySelector('#helpful_container').style.display = 'block';
@@ -742,27 +739,82 @@ setInterval(function() {
   max_percent_scrolled = Math.max(max_percent_scrolled, amountscrolled())
 }, 100)
 
-var time_total = 0;
-var lang_to_time_total = {};
+
+var is_active = false;
+function markAsActive() {
+  is_active = true;
+}
+
+document.addEventListener('mousemove', markAsActive);
+document.addEventListener('mousedown', markAsActive);
+document.addEventListener('mouseup', markAsActive);
+document.addEventListener('keydown', markAsActive);
+document.addEventListener('keyup', markAsActive);
+document.addEventListener('scroll', markAsActive);
+document.addEventListener('wheel', markAsActive);
+document.addEventListener('touchstart', markAsActive);
+document.addEventListener('touchmove', markAsActive);
+document.addEventListener('touchend', markAsActive);
+
+function incrd(d, k) {
+  if (d[k] === undefined) {
+    d[k] = 1;
+  } else {
+    d[k] += 1;
+  }
+}
+
+// categories:
+// unfocused and idle
+// unfocesed and active
+// focused and idle
+// focused and active
+var time_unfocused = 0;
+var lang_to_time_unfocidle = {};
+var lang_to_time_unfocactive = {};
+var lang_to_time_focidle = {};
+var lang_to_time_focactive = {};
 setInterval(function() {
-  //time_total += 1;
   var curLang = selectedLang;
   if (mtLang !== undefined) {
     curLang = mtLang + '=E|' + selectedLang;
   }
+  var was_active = is_active;
+  is_active = false;
   var current_scroll = amountscrolled()
   max_percent_scrolled = Math.max(max_percent_scrolled, current_scroll)
-  if (lang_to_time_total[curLang] === undefined) {
-    lang_to_time_total[curLang] = 1
+  if (was_active) {
+    if (document.hasFocus()) {
+      incrd(lang_to_time_focactive, curLang);
+    } else {
+      incrd(lang_to_time_unfocactive, curLang);
+    }
   } else {
-    lang_to_time_total[curLang] += 1
+    if (document.hasFocus()) {
+      incrd(lang_to_time_focidle, curLang);
+    } else {
+      incrd(lang_to_time_unfocidle, curLang);
+    }
+  }
+  if (!was_active) {
+    return;
   }
   var data = {
-    //Intv: 1000,
-    Totals: lang_to_time_total,
     MaxScroll: max_percent_scrolled,
     Scroll: current_scroll,
     Lang: selectedLang,
+  }
+  if (Object.keys(lang_to_time_unfocidle).length > 0) {
+    data.UnfocIdle = lang_to_time_unfocidle;
+  }
+  if (Object.keys(lang_to_time_unfocactive).length > 0) {
+    data.UnfocActive = lang_to_time_unfocactive;
+  }
+  if (Object.keys(lang_to_time_focidle).length > 0) {
+    data.FocIdle = lang_to_time_focidle;
+  }
+  if (Object.keys(lang_to_time_focactive).length > 0) {
+    data.FocActive = lang_to_time_focactive;
   }
   if (mtLang !== undefined) {
     data.MtLang = mtLang
