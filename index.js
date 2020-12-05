@@ -822,15 +822,17 @@ setInterval(function() {
   addLog('AddTime', data)
 }, 1000)
 
+var backend_host = 'liltstat.com';
+if (window.location.hostname === 'localhost') {
+  backend_host = 'localhost:3000';
+}
+
 function sendData(rows, data, callback, timeLimit) {
   var haveRunCallback = false;
   var cbname = 'cb' + Math.floor(Math.random() * 2147483647)
   var script_tag = document.createElement('script');
   script_tag.setAttribute('id', cbname);
-  //var hostname = 'localhost:3000'
-  //var hostname = '34.121.175.119'
-  var hostname = 'liltstat.com'
-  script_tag.setAttribute('src', window.location.protocol + '//' + hostname + '/addlog?callback=' + cbname + '&rows=' + encodeURIComponent(JSON.stringify(rows)) + '&data=' + encodeURIComponent(JSON.stringify(data)));
+  script_tag.setAttribute('src', window.location.protocol + '//' + backend_host + '/addlog?callback=' + cbname + '&rows=' + encodeURIComponent(JSON.stringify(rows)) + '&data=' + encodeURIComponent(JSON.stringify(data)));
   window[cbname] = function(res) {
     //console.log('callback! ' + cbname)
     //console.log(res)
