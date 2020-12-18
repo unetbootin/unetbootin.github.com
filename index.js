@@ -1,3 +1,25 @@
+if ((window.location.host.indexOf('transifex') !== -1) || window.location.search.startsWith('?tfxpreview') || window.location.search.startsWith('?transifex')) {
+  (function() {
+    window.liveSettings={api_key:"cdbb199282754614bb488676c54fcc7b"};
+    var script_tag = document.createElement('script');
+    script_tag.setAttribute('type', 'text/javascript');
+    script_tag.setAttribute('src', '//cdn.transifex.com/live.js');
+    document.head.appendChild(script_tag);
+
+    var add_translate_timer = setInterval(function() {
+      var language_picker = document.getElementById('tx-live-lang-picker')
+      if (language_picker) {
+        clearInterval(add_translate_timer);
+        var help_translate = document.createElement('li');
+        help_translate.setAttribute('onclick', 'window.location.href="https://www.transifex.com/gkovacs/unetbootin-website/"');
+        help_translate.setAttribute('data-value', 'en');
+        help_translate.innerHTML = 'Translate';
+        language_picker.appendChild(help_translate);
+        document.querySelector('#tx-live-lang-container').style.display = 'block';
+      }
+    }, 100);
+  })();
+} else {
 var helpful_message_translations = {
   // from https://www.tensorflow.org/install/gpu
   'en': 'Was this page helpful?',
@@ -921,3 +943,5 @@ runOnceTrue(function() {
 });
 
 addLog('Init', initdata);
+}
+
