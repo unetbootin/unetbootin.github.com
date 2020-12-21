@@ -249,7 +249,7 @@ function addLog(eventType, data, callback, timeLimit) {
     data.MtLang = mtLang;
   }
   // user id and session id also send
-  var dataVersion = 4;
+  var dataVersion = 6;
   var time = Date.now();
   var insert_id = generateUUID();
   var rows = {
@@ -446,7 +446,8 @@ function setSelectedLanguage(selected_lang) {
       translation_info = match_info;
     } else {
       //if (human_translation && strip_html_tags(match_info.translations[selected_lang].template) !== strip_html_tags(match_info.template)) {
-      if (human_translation && !text_equal(match_info.translations[selected_lang].template, match_info.template)) {
+      //if (human_translation && !text_equal(match_info.translations[selected_lang].template, match_info.template)) {
+      if (human_translation && match_info.translations[selected_lang] !== undefined) {
         translation_info = match_info.translations[selected_lang];
       } else {
         translation_info = match_info.translations_mt[selected_lang];
@@ -471,6 +472,7 @@ function viewInNextBestLang() {
     PrevLang: selectedLang,
     Lang: nextBestLang,
     Via: 'HelpfulBar',
+    FracTrans: getFractionTranslated(nextBestLang),
   })
   setSelectedLanguage(nextBestLang);
 }
@@ -503,8 +505,21 @@ function getDefaultLanguage() {
   return getPreferredLanguage();
 }
 
+function getFractionTranslated(lang) {
+  var translated = 0;
+  for (var i = 0; i < match_info_list.length; ++i) {
+    var x = match_info_list[i];
+    if (x.translations[lang] !== undefined) {
+      translated += 1
+    }
+  }
+  return [translated, match_info_list.length];
+}
+
 setSelectedLanguage(getDefaultLanguage())
 //setTranslationMode(translation_mode);
+initdata.BestLang = getPreferredLanguage();
+initdata.FracTrans = getFractionTranslated(initdata.BestLang);
 
 runOnceAvailable('#tx-live-lang-picker', function() {
   var langpicker = document.querySelector('#tx-live-lang-picker');
@@ -520,6 +535,7 @@ runOnceAvailable('#tx-live-lang-picker', function() {
         PrevLang: selectedLang,
         Lang: langSelected,
         Via: 'LangSel',
+        FracTrans: getFractionTranslated(langSelected),
       })
       setSelectedLanguage(langSelected);
       closeLangPicker();
@@ -675,7 +691,8 @@ setInterval(() => {
       translation_info = match_info;
     } else {
       //if (human_translation && strip_html_tags(match_info.translations[selected_lang].template) !== strip_html_tags(match_info.template)) {
-      if (human_translation && !text_equal(match_info.translations[selected_lang].template, match_info.template)) {
+      //if (human_translation && !text_equal(match_info.translations[selected_lang].template, match_info.template)) {
+      if (human_translation && match_info.translations[selected_lang] !== undefined) {
         translation_info = match_info.translations[selected_lang];
       } else {
         translation_info = match_info.translations_mt[selected_lang];
