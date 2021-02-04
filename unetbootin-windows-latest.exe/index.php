@@ -1,3 +1,3 @@
 <?php
-header( 'Location: https://github.com/unetbootin/unetbootin/releases/download/700/unetbootin-windows-700.exe' ) ;
+header( 'Location: https://github.com/unetbootin/unetbootin/releases/download/702/unetbootin-windows-702.exe' ) ;
 ?>
