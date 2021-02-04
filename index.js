@@ -249,7 +249,7 @@ function addLog(eventType, data, callback, timeLimit) {
     data.MtLang = mtLang;
   }
   // user id and session id also send
-  var dataVersion = 6;
+  var dataVersion = 7;
   var time = Date.now();
   var insert_id = generateUUID();
   var rows = {
@@ -273,6 +273,7 @@ var initdata = {
   'Lang': navigator.language,
   'LangList': navigator.languages,
   'Browser': navigator.userAgent,
+  'Ref': document.referrer,
 }
 if (Intl && Intl.DateTimeFormat) {
   initdata.TimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone
