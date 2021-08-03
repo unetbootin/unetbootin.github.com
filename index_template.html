@@ -381,15 +381,17 @@
 <!-- <script src="cld3.js"></script> -->
 
 
-<!-- <script async="" src="https://www.google-analytics.com/analytics.js"></script><script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9E56NPFFH7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){window.dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  ga('create', 'UA-62588527-6', 'auto');
-  ga('send', 'pageview');
-</script> -->
+  gtag('config', 'G-9E56NPFFH7', {
+    'custom_map': {'dimension1': 'locuid'}
+  });
+  gtag('send', 'pageview', {'locuid': localStorage.user_id});
+</script>
 
 <!-- <script type="text/javascript">window.liveSettings={api_key:"cdbb199282754614bb488676c54fcc7b"}</script>
 <script type="text/javascript" src="//cdn.transifex.com/live.js"></script> -->
