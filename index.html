@@ -387,6 +387,7 @@
   gtag('js', new Date());
 
   gtag('config', 'G-9E56NPFFH7', {
+    'user_id': localStorage.user_id,
     'custom_map': {'dimension1': 'locuid'}
   });
   gtag('send', 'pageview', {'locuid': localStorage.user_id});
