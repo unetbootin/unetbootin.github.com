@@ -391,6 +391,7 @@
     'user_id': localStorage.user_id,
     'custom_map': {'dimension1': 'locuid'}
   });
+  gtag('event', 'initview', {'event_category': 'engagement', 'locuid': localStorage.user_id});
   gtag('send', 'pageview', {'locuid': localStorage.user_id});
 </script>
 
