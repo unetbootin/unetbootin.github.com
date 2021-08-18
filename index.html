@@ -391,8 +391,8 @@
     'user_id': localStorage.user_id,
     'custom_map': {'dimension1': 'locuid', 'dimension2': 'transcond'}
   });
-  gtag('event', 'initview', {'event_category': 'engagement', 'locuid': localStorage.user_id, transcond: window.translation_condition_name});
-  gtag('send', 'pageview', {'locuid': localStorage.user_id});
+  gtag('event', 'initview', {'event_category': 'engagement', 'locuid': localStorage.user_id, 'transcond': window.translation_condition_name});
+  gtag('send', 'pageview', {'locuid': localStorage.user_id, 'transcond': window.translation_condition_name});
 </script>
 
 <!-- <script type="text/javascript">window.liveSettings={api_key:"cdbb199282754614bb488676c54fcc7b"}</script>
