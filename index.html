@@ -387,9 +387,11 @@
   function gtag(){window.dataLayer.push(arguments);}
   gtag('js', new Date());
 
+  // https://support.google.com/analytics/thread/41497070/sending-custom-dimensions-with-gtag-best-method?hl=en
   gtag('config', 'G-9E56NPFFH7', {
     'user_id': localStorage.user_id,
-    'custom_map': {'dimension1': 'locuid', 'dimension2': 'transcond'}
+    'custom_map': {'dimension1': 'locuid', 'dimension2': 'transcond', 'dimension3': 'transconduser'},
+    'transconduser': window.translation_condition_name
   });
   gtag('event', 'initview', {'event_category': 'engagement', 'locuid': localStorage.user_id, 'transcond': window.translation_condition_name});
   gtag('send', 'pageview', {'locuid': localStorage.user_id, 'transcond': window.translation_condition_name});
