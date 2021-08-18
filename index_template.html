@@ -389,9 +389,9 @@
 
   gtag('config', 'G-9E56NPFFH7', {
     'user_id': localStorage.user_id,
-    'custom_map': {'dimension1': 'locuid'}
+    'custom_map': {'dimension1': 'locuid', 'dimension2': 'transcond'}
   });
-  gtag('event', 'initview', {'event_category': 'engagement', 'locuid': localStorage.user_id});
+  gtag('event', 'initview', {'event_category': 'engagement', 'locuid': localStorage.user_id, transcond: window.translation_condition_name});
   gtag('send', 'pageview', {'locuid': localStorage.user_id});
 </script>
 

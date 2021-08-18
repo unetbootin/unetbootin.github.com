@@ -238,6 +238,7 @@ var translation_condition_names = [
   'No Tr',
 ]
 var translation_condition_name = translation_condition_names[translation_mode];
+window.translation_condition_name = translation_condition_name;
 
 function addLog(eventType, data, callback, timeLimit) {
   //console.log(eventType)
