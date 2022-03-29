@@ -365,7 +365,7 @@
   }
 
   #tx-live-lang-container {
-    display: none;
+    display: block;
   }
 
 </style>
@@ -376,7 +376,7 @@
 </div>
 </div>
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 function addTranslateButton() {
   var language_picker = document.getElementById('tx-live-lang-picker');
   var help_translate = document.createElement('li');
@@ -404,10 +404,29 @@ function addTranslateButton() {
     }
   }, 100);
 })();
-</script>
+</script> -->
 <!-- <script src="match_info_list.js"></script> -->
 <!-- <script src="index.js"></script> -->
 <!-- <script src="cld3.js"></script> -->
+
+<script type="text/javascript">window.liveSettings={api_key:"cdbb199282754614bb488676c54fcc7b"}</script>
+<script type="text/javascript" src="//cdn.transifex.com/live.js"></script>
+
+<script type="text/javascript">
+
+var add_translate_timer = setInterval(function() {
+  var language_picker = document.getElementById('tx-live-lang-picker')
+  if (language_picker) {
+    clearInterval(add_translate_timer);
+    var help_translate = document.createElement('li');
+    help_translate.setAttribute('onclick', 'window.location.href="https://www.transifex.com/gkovacs/unetbootin-website/"');
+    help_translate.setAttribute('data-value', 'en');
+    help_translate.innerHTML = 'Translate';
+    language_picker.appendChild(help_translate);
+  }
+}, 1000);
+
+</script>
 
 <script async="" src="https://www.google-analytics.com/analytics.js"></script><script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -435,25 +454,6 @@ function addTranslateButton() {
   });
   gtag('event', 'initview', {'event_category': 'engagement', 'locuid': localStorage.user_id, 'transcond': window.translation_condition_name});
   gtag('send', 'pageview', {'locuid': localStorage.user_id, 'transcond': window.translation_condition_name});
-</script> -->
-
-<!-- <script type="text/javascript">window.liveSettings={api_key:"cdbb199282754614bb488676c54fcc7b"}</script>
-<script type="text/javascript" src="//cdn.transifex.com/live.js"></script> -->
-
-<!-- <script>
-
-var add_translate_timer = setInterval(function() {
-  var language_picker = document.getElementById('tx-live-lang-picker')
-  if (language_picker) {
-    clearInterval(add_translate_timer);
-    var help_translate = document.createElement('li');
-    help_translate.setAttribute('onclick', 'window.location.href="https://www.transifex.com/gkovacs/unetbootin-website/"');
-    help_translate.setAttribute('data-value', 'en');
-    help_translate.innerHTML = 'Translate';
-    language_picker.appendChild(help_translate);
-  }
-}, 1000);
-
 </script> -->
 
 <div id="tx-live-lang-container" class="txlive-langselector txlive-langselector-bottomleft notranslate">
